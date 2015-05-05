@@ -16,5 +16,22 @@ namespace dxy.Page
         {
             InitializeComponent();
         }
+
+        
+        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (healthPivot.SelectedIndex==0)
+            {
+                
+            }
+            else if (healthPivot.SelectedIndex == 1)
+            {
+
+            }
+            else if (healthPivot.SelectedIndex == 2)
+            {
+
+            }
+        }
     }
 }

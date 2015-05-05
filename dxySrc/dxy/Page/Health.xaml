@@ -11,20 +11,25 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="False">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>-->
 
-        <phone:Pivot>
+        <phone:Pivot x:Name="healthPivot" SelectionChanged="Pivot_SelectionChanged">
             <phone:PivotItem Header="最新资讯"></phone:PivotItem>
             <phone:PivotItem Header="健康专题"></phone:PivotItem>
             <phone:PivotItem Header="资讯收藏"></phone:PivotItem>
         </phone:Pivot>
+        <Grid Background="Black" Opacity="0.8" Visibility="Collapsed">
+            <ProgressBar VerticalAlignment="Center" IsIndeterminate="True"></ProgressBar> 
+            
+        </Grid>
+        
     </Grid>
 
 </phone:PhoneApplicationPage>
