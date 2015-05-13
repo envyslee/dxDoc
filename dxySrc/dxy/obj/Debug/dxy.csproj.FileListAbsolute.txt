@@ -52,3 +52,33 @@ C:\Users\eggri_000\Desktop\doc\trunk\dxySrc\dxy\obj\Debug\dxy.csproj.GenerateRes
 C:\Users\eggri_000\Desktop\doc\trunk\dxySrc\dxy\obj\Debug\dxy.dll
 C:\Users\eggri_000\Desktop\doc\trunk\dxySrc\dxy\obj\Debug\dxy.pdb
 C:\Users\eggri_000\Desktop\doc\trunk\dxySrc\dxy\obj\Debug\XapCacheFile.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\ApplicationIcon.png
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\dxy.dll
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\dxy.pdb
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\AppManifest.xaml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Properties\WMAppManifest.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\dxy_Debug_AnyCPU.xap
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\System.Net.Http.dll
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\System.Net.Http.Extensions.dll
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\System.Net.Http.Primitives.dll
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\System.Net.Http.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\System.Net.Http.Extensions.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\System.Net.Http.Primitives.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.csprojResolveAssemblyReference.cache
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\App.g.cs
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\MainPage.g.cs
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\Page\Health.g.cs
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.g.resources
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.Resources.AppResources.resources
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.csproj.GenerateResource.Cache
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.dll
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.pdb
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\XapCacheFile.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Newtonsoft.Json.dll
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Newtonsoft.Json.xml
+D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\Page\NewsDetail.g.cs

@@ -11,18 +11,44 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False"
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    >
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
         <!--<Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>-->
 
-        <phone:Pivot x:Name="healthPivot" SelectionChanged="Pivot_SelectionChanged">
-            <phone:PivotItem Header="最新资讯"></phone:PivotItem>
-            <phone:PivotItem Header="健康专题"></phone:PivotItem>
+        <phone:Pivot x:Name="healthPivot" Foreground="Black" SelectionChanged="Pivot_SelectionChanged">
+            <phone:PivotItem Header="最新资讯">
+                <phone:LongListSelector ItemsSource="{Binding BindNews}">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="White" Margin="0 0 0 6" Tap="Grid_Tap" Tag="{Binding Id}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Title}" Foreground="Black" TextWrapping="Wrap" Margin="4 0 0 0" Padding="6 4 4 0"></TextBlock>
+                                <Border Grid.Column="1" BorderThickness="2" BorderBrush="Gray">
+                                    <Image  Source="{Binding Cover_small}"></Image>
+                                </Border>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                    <phone:LongListSelector.ListFooter>
+                        <TextBlock x:Name="addMore" Tap="TextBlock_Tap" Foreground="Black" HorizontalAlignment="Center" FontSize="24">加载更多...</TextBlock>
+                    </phone:LongListSelector.ListFooter>
+                </phone:LongListSelector>
+            </phone:PivotItem>
+            <phone:PivotItem Header="健康专题">
+                
+            </phone:PivotItem>
             <phone:PivotItem Header="资讯收藏"></phone:PivotItem>
         </phone:Pivot>
         <Grid Background="Black" Opacity="0.8" Visibility="Collapsed">

@@ -11,10 +11,10 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="False">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -24,8 +24,8 @@
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="页面名称" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <!--<TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>-->
+            <TextBlock Text="丁香医生" Foreground="Black" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
@@ -40,11 +40,11 @@
                 <ColumnDefinition Width="6"/>
                 <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
-            <Grid Tap="Health_Tap">
-                <TextBlock>健康科普</TextBlock>
+            <Grid Tap="Health_Tap" Background="#27AE60" >
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">健康科普</TextBlock>
             </Grid>
-            <Grid Grid.Column="2">
-                <TextBlock>常见病症</TextBlock>
+            <Grid Grid.Column="2" Background="#27AE60">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">常见病症</TextBlock>
             </Grid>
         </Grid>
 
