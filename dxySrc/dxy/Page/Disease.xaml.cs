@@ -385,6 +385,29 @@ namespace dxy.Page
             NavigationService.Navigate(new Uri("/Page/Search.xaml?key=" + txt, UriKind.Relative));
         }
 
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            if (foot.Visibility == Visibility.Visible || leg.Visibility == Visibility.Visible || hips.Visibility == Visibility.Visible || sex.Visibility == Visibility.Visible || woman.Visibility == Visibility.Visible || stomach.Visibility == Visibility.Visible || waist.Visibility == Visibility.Visible || hand.Visibility == Visibility.Visible || chest.Visibility == Visibility.Visible || threat.Visibility == Visibility.Visible || mouth.Visibility == Visibility.Visible || eyeear.Visibility == Visibility.Visible || skin.Visibility == Visibility.Visible || wholeBody.Visibility == Visibility.Visible || head.Visibility == Visibility.Visible)
+            {
+                foot.Visibility = Visibility.Collapsed;
+                leg.Visibility = Visibility.Collapsed;
+                hips.Visibility = Visibility.Collapsed;
+                sex.Visibility = Visibility.Collapsed;
+                woman.Visibility = Visibility.Collapsed;
+                stomach.Visibility = Visibility.Collapsed;
+                waist.Visibility = Visibility.Collapsed;
+                hand.Visibility = Visibility.Collapsed;
+                chest.Visibility = Visibility.Collapsed;
+                threat.Visibility = Visibility.Collapsed;
+                mouth.Visibility = Visibility.Collapsed;
+                eyeear.Visibility = Visibility.Collapsed;
+                skin.Visibility = Visibility.Collapsed;
+                wholeBody.Visibility = Visibility.Collapsed;
+                head.Visibility = Visibility.Collapsed;
+            }
+            base.OnNavigatedFrom(e);
+        }
+
 
     }
 }

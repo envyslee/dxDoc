@@ -6,28 +6,48 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False"
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    toolkit:TiltEffect.IsTiltEnabled="True">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Row="0" Background="#27AE60" >
-            <TextBlock x:Name="searchTitle" FontSize="36" Padding="8 12"/>
-        </Grid>
-
+    <Grid x:Name="LayoutRoot" Background="White">
+   
         <!--ContentPanel - 在此处放置其他内容-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <phone:Pivot Style="{ StaticResource SpecialPivotStyle}" Foreground="Black">
+            <!--<phone:Pivot.TitleTemplate>
+                <DataTemplate>
+                    --><!--<Image Source="Image/logo.png" Height="80" HorizontalAlignment="Left"></Image>--><!--
+                </DataTemplate>
+            </phone:Pivot.TitleTemplate>-->
+            <phone:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock FontSize="36" Text="{Binding}" Foreground="Black"></TextBlock>
+                </DataTemplate>
+            </phone:Pivot.HeaderTemplate>
+            <phone:PivotItem x:Name="pwb" >
+                <phone:WebBrowser x:Name="wb" ></phone:WebBrowser>
+            </phone:PivotItem>
+            <phone:PivotItem Header="相关药品">
+                <ListBox Grid.Row="1" ItemsSource="{Binding BindCom}" Background="White">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid  Margin="0 2 0 2" Tag="{Binding RouteId}" Tap="Grid_Tap">
+                                <TextBlock Text="{Binding ComponentName}" Tag="{Binding ComponentId}"  Foreground="Black" FontSize="24" Padding="8 8 6 8" TextWrapping="Wrap"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </phone:PivotItem>
+        </phone:Pivot>
 
-        </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>

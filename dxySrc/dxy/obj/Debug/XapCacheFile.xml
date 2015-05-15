@@ -1,25 +1,29 @@
-﻿<xapCache source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\dxy_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015/5/14 17:45:23">
-  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.dll" archivePath="dxy.dll" lastWriteTime="2015/5/14 17:45:22" />
+﻿<xapCache source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\dxy_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2015/5/15 17:45:32">
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\obj\Debug\dxy.dll" archivePath="dxy.dll" lastWriteTime="2015/5/15 17:45:31" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2015/5/13 13:13:57" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Image\dxy.jpg" archivePath="Image\dxy.jpg" lastWriteTime="2015/5/15 15:55:41" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Image\dxy_p.png" archivePath="Image\dxy_p.png" lastWriteTime="2015/5/15 16:16:32" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Image\favs.png" archivePath="Image\favs.png" lastWriteTime="2013/6/5 7:37:58" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Image\share.png" archivePath="Image\share.png" lastWriteTime="2013/6/5 7:37:58" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="2015/5/14 12:06:15" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="2015/5/14 12:06:15" />
-  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="2015/5/14 12:06:15" />
-  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="2015/5/14 12:06:15" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="2015/5/15 16:45:44" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="2015/5/15 16:45:44" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="2015/5/14 12:06:15" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="2015/5/14 12:06:15" />
-  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2015/5/14 12:28:28" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2015/5/15 17:33:56" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2015/5/13 13:13:57" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\dxy\Bin\Debug\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2015/5/13 13:13:57" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\packages\Coding4Fun.Toolkit.Controls.2.0.9\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll" archivePath="Coding4Fun.Toolkit.Controls.dll" lastWriteTime="2015/5/15 16:45:37" />
+  <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\packages\Coding4Fun.Toolkit.Controls.2.0.9\lib\windowsphone8\Coding4Fun.Toolkit.dll" archivePath="Coding4Fun.Toolkit.dll" lastWriteTime="2015/5/15 16:45:37" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="2015/5/14 12:06:15" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="2015/5/13 14:28:00" />
   <file source="D:\documents\visual studio 2013\Projects\dxy\trunk\dxySrc\packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.dll" archivePath="System.Net.Http.dll" lastWriteTime="2015/5/13 13:14:20" />

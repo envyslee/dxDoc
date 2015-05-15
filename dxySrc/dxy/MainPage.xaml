@@ -7,41 +7,94 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    toolkit:TiltEffect.IsTiltEnabled="True"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False"
+    Loaded="PhoneApplicationPage_Loaded">
 
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" >
+            <TextBlock Text="" Foreground="Black" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <Grid  Grid.Row="1" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="12"></RowDefinition>
+                <RowDefinition Height="140"></RowDefinition>
+                <RowDefinition Height="12"></RowDefinition>
+                <RowDefinition Height="140"></RowDefinition>
+                <RowDefinition Height="12"></RowDefinition>
+                <RowDefinition Height="140"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6"></ColumnDefinition>
+                <ColumnDefinition Width="140"></ColumnDefinition>
+                <ColumnDefinition Width="12"></ColumnDefinition>
+                <ColumnDefinition Width="140"></ColumnDefinition>
+                <ColumnDefinition Width="12"></ColumnDefinition>
+                <ColumnDefinition Width="140"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Grid.ColumnSpan="5" >
+                <Image x:Name="TileImg" Stretch="UniformToFill"></Image>
+                <Grid HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom"
+                      Height="100"
+                      Width="100"
+                      Margin="0 0 0 16">
+                    <Image Source="Image/dxy_p.png" Tap="Image_Tap">
+                        <!--<Image.Clip>
+                            <EllipseGeometry RadiusX="105" RadiusY="100" Center="225,175"/>
+                        </Image.Clip>-->
+                    </Image>
+                </Grid>
 
+            </Grid>
 
-    <!--ContentPanel - 在此处放置其他内容-->
-    <phone:Pivot x:Name="ContentPanel" Background="#E9ECF1" Title="丁香医生" Foreground="Black">
-        <phone:PivotItem Header="分类">
+            <Grid Tap="Health_Tap" Background="#27AE60" Grid.Row="2" Grid.Column="1">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White">健康科普</TextBlock>
+            </Grid>
+            <Grid Tap="Grid_Tap" Grid.Column="3" Background="#27AE60" Grid.Row="2" >
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">常见病症</TextBlock>
+            </Grid>
+            <Grid Tap="Grid_Tap_1" Grid.Row="2" Grid.Column="5" Background="#27AE60">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">疫苗管理</TextBlock>
+            </Grid>
+            <Grid  Grid.Row="4" Grid.Column="1" Background="#27AE60">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">假药曝光</TextBlock>
+            </Grid>
+            <Grid  Grid.Row="4" Grid.Column="3" Background="#27AE60">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">我的药箱</TextBlock>
+            </Grid>
+            <Grid  Grid.Row="4" Grid.Column="5" Background="#27AE60">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">服药提醒</TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <!--<phone:PivotItem Header="搜索">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="120"/>
-                    <RowDefinition Height="6"/>
-                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="120"/>
-                    <ColumnDefinition Width="6"/>
-                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Grid Tap="Health_Tap" Background="#27AE60" >
-                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White">健康科普</TextBlock>
-                </Grid>
-                <Grid Tap="Grid_Tap" Grid.Column="2" Background="#27AE60">
-                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">常见病症</TextBlock>
-                </Grid>
+                <TextBox x:Name="searchKey" VerticalAlignment="Top"></TextBox>
+                <Button Grid.Column="1" Foreground="Black" BorderBrush="Black" Tap="Button_Tap">搜索</Button>
             </Grid>
-        </phone:PivotItem>
-        <phone:PivotItem Header="搜索">
-            <TextBox Height="80" VerticalAlignment="Top"></TextBox>
-        </phone:PivotItem>
+                
+        </phone:PivotItem>-->
 
-    </phone:Pivot>
 
 
 </phone:PhoneApplicationPage>

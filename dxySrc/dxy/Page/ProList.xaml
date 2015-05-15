@@ -28,14 +28,23 @@
         </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
-        <phone:LongListSelector Grid.Row="1" ItemsSource="{Binding BindNews}">
-            <phone:LongListSelector.ListHeader>
-              
-                    <DataTemplate>
-                    <Image Source="{Binding BindNews[0].Cover}"></Image>
-                    </DataTemplate>
-                  
-            </phone:LongListSelector.ListHeader>
+        <phone:LongListSelector x:Name="lls" Grid.Row="1" ItemsSource="{Binding BindNews}">
+            <phone:LongListSelector.ListHeaderTemplate>
+                <DataTemplate>
+                    <Grid >
+                        <Image Source="{Binding ElementName=lls,Path=DataContext.BindNews[0].Cover}"
+                               Height="240" 
+                               Stretch="UniformToFill"
+                               HorizontalAlignment="Center"></Image>
+                        <TextBlock  Foreground="White"
+                                    FontSize="24"
+                                    Text="{Binding ElementName=titleTb,Path=Tag}"
+                                    TextWrapping="Wrap"
+                                    VerticalAlignment="Bottom"
+                                    Margin="8 0 8 8"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </phone:LongListSelector.ListHeaderTemplate>
             <phone:LongListSelector.ItemTemplate>
                 <DataTemplate>
                     <Grid Background="White" Margin="0 0 0 4" Tag="{Binding Id}" Tap="Grid_Tap">

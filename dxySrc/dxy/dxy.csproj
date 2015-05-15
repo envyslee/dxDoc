@@ -93,10 +93,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\MessageHelper.cs" />
     <Compile Include="Entity\article.cs" />
     <Compile Include="Entity\articleSec.cs" />
+    <Compile Include="Entity\composite.cs" />
+    <Compile Include="Entity\compositeSec.cs" />
+    <Compile Include="Entity\compositeThird.cs" />
     <Compile Include="Entity\disease.cs" />
     <Compile Include="Entity\diseaseSec.cs" />
+    <Compile Include="Entity\drug.cs" />
+    <Compile Include="Entity\drugList.cs" />
+    <Compile Include="Entity\drugListSec.cs" />
     <Compile Include="Entity\medicine.cs" />
     <Compile Include="Entity\medicineSec.cs" />
     <Compile Include="Entity\newDetailSec.cs" />
@@ -107,6 +114,7 @@
     <Compile Include="Entity\projectSec.cs" />
     <Compile Include="Entity\qa.cs" />
     <Compile Include="Entity\qaSec.cs" />
+    <Compile Include="Entity\register.cs" />
     <Compile Include="Entity\searchEnd.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -115,11 +123,20 @@
     <Compile Include="Page\Disease.xaml.cs">
       <DependentUpon>Disease.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\Drug.xaml.cs">
+      <DependentUpon>Drug.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\DrugList.xaml.cs">
+      <DependentUpon>DrugList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\Health.xaml.cs">
       <DependentUpon>Health.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\KindDetail.xaml.cs">
       <DependentUpon>KindDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Medical.xaml.cs">
       <DependentUpon>Medical.xaml</DependentUpon>
@@ -129,6 +146,9 @@
     </Compile>
     <Compile Include="Page\ProList.xaml.cs">
       <DependentUpon>ProList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
@@ -156,11 +176,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\Drug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\DrugList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\Health.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page\KindDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page\ProList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -212,6 +248,8 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\dxy.jpg" />
+    <Content Include="Image\dxy_p.png" />
     <Content Include="Image\favs.png" />
     <Content Include="Image\share.png" />
     <Content Include="README_FIRST.txt" />
@@ -228,6 +266,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Coding4Fun.Toolkit, Version=2.0.8.0, Culture=neutral, PublicKeyToken=c5fd7b72b1a17ce4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.0.9\lib\windowsphone8\Coding4Fun.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Controls, Version=2.0.9.0, Culture=neutral, PublicKeyToken=c5fd7b72b1a17ce4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.0.9\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
       <Private>True</Private>
@@ -249,9 +295,7 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

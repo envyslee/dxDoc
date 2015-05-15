@@ -23,9 +23,9 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
-        <Grid Grid.Row="0" Background="#27AE60">
+        <Grid Grid.Row="0" Background="#EF6C00">
             <!--<Image x:Name="titleImg"  Source="{Binding ImgSource}"></Image>-->
-            <TextBlock x:Name="titleTb" TextWrapping="Wrap" FontSize="36" HorizontalAlignment="Center" Padding="4 12"></TextBlock>
+            <TextBlock x:Name="titleTb" TextWrapping="Wrap" FontSize="28" HorizontalAlignment="Center" Padding="4 12"></TextBlock>
         </Grid>
 
         <!--ContentPanel - 在此处放置其他内容-->
@@ -35,7 +35,7 @@
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#27AE60">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#EF6C00">
             <shell:ApplicationBarIconButton IconUri="/Image/share.png" Text="分享" />
             <shell:ApplicationBarIconButton IconUri="/Image/favs.png" Text="收藏"/>
             <!--<shell:ApplicationBar.MenuItems>

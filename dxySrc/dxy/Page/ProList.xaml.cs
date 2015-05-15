@@ -19,6 +19,9 @@ namespace dxy.Page
         PhoneApplicationService ps = PhoneApplicationService.Current;
         private news tmpnew;
 
+        private bool loaded = false;
+
+
         public ObservableCollection<newsSec> bindNews = new ObservableCollection<newsSec>();
         public ObservableCollection<newsSec> BindNews
         {
@@ -41,6 +44,11 @@ namespace dxy.Page
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            if (e.NavigationMode== NavigationMode.Back)
+            {
+                loaded = true;
+                return;
+            }
             object title;
             object desc;
             if (ps.State.ContainsKey("proTitle") && ps.State.ContainsKey("proDesc"))
@@ -49,10 +57,10 @@ namespace dxy.Page
                 {
                     titleTb.Text = title.ToString();
                 }
-                //if (ps.State.TryGetValue("proDesc", out desc))
-                //{
-
-                //}
+                if (ps.State.TryGetValue("proDesc", out desc))
+                {
+                    titleTb.Tag = desc.ToString();
+                }
             }
             base.OnNavigatedTo(e);
         }
@@ -64,6 +72,10 @@ namespace dxy.Page
         /// <param name="e"></param>
         private async void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+            if (loaded)
+            {
+                return;
+            }
             if (!NavigationContext.QueryString.Keys.Contains("id"))
             {
                 return;
