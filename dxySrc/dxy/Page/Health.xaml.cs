@@ -19,7 +19,11 @@ namespace dxy.Page
         private int index = 0;
         private int page = 1;
         private int projectPage = 1;
+        private string end = "已经到底了...";
+
+        private bool proLoad = false;
         private HttpClient client = new HttpClient();
+        PhoneApplicationService ps = PhoneApplicationService.Current;
 
 
 
@@ -58,7 +62,7 @@ namespace dxy.Page
             get { return bindPro; }
             set
             {
-                if (bindPro!=value)
+                if (bindPro != value)
                 {
                     bindPro = value;
                 }
@@ -73,13 +77,14 @@ namespace dxy.Page
 
         private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (healthPivot.SelectedIndex == 0)
+            if (healthPivot.SelectedIndex == 1)
             {
-
-            }
-            else if (healthPivot.SelectedIndex == 1)
-            {
-                GetProject(projectPage);
+                if (!proLoad)
+                {
+                    GetProject(projectPage);
+                    proLoad = true;
+                }
+                
             }
             else if (healthPivot.SelectedIndex == 2)
             {
@@ -92,7 +97,7 @@ namespace dxy.Page
         /// </summary>
         private async void GetNews(int i)
         {
-            string news = "http://dxy.com/app/i/columns/article/list?page_index=" + i.ToString() + "&items_per_page=10&order=publishTime";
+            string news = "http://dxy.com/app/i/columns/article/list?page_index=" + i + "&items_per_page=10&order=publishTime";
 
 
             HttpResponseMessage response = await client.GetAsync(news);
@@ -107,7 +112,7 @@ namespace dxy.Page
             });
             if (resNews.Items.Count < 10)
             {
-                addMore.Text = "已经到底了...";
+                addMore.Text = end;
                 return;
             }
             page++;
@@ -126,13 +131,13 @@ namespace dxy.Page
 
             string tmp = responseBody.Substring(8, responseBody.Length - 9);
             resPro = JsonConvert.DeserializeObject<project>(tmp);
-            resPro.Items.ToList().ForEach(z =>
+            resPro.Items.ForEach(z =>
             {
                 bindPro.Add(z);
             });
-            if (resPro.Items.Count<10)
+            if (resPro.Items.Count < 10)
             {
-                
+                morePro.Text = end;
             }
             projectPage++;
 
@@ -161,13 +166,40 @@ namespace dxy.Page
         }
 
         /// <summary>
-        /// 加载更多EF6C00
+        /// 加载更多   
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             GetNews(page);
+        }
+
+        private void morePro_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            GetProject(projectPage);
+        }
+
+        /// <summary>
+        /// 进入健康专题
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Grid_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Grid g = sender as Grid;
+            string id = g.Tag.ToString();
+            foreach (var item in BindPro)
+            {
+                if (item.Id == id)
+                {
+                    ps.State["proTitle"] = item.Name;
+                    ps.State["proDesc"] = item.Desc;
+                    break;
+                }
+            }
+            NavigationService.Navigate(new Uri("/Page/ProList.xaml?id=" + id, UriKind.Relative));
+
         }
     }
 }

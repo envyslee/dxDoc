@@ -25,7 +25,7 @@
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <Grid Grid.Row="0" Background="#27AE60">
             <!--<Image x:Name="titleImg"  Source="{Binding ImgSource}"></Image>-->
-            <TextBlock x:Name="titleTb" TextWrapping="Wrap" FontSize="28" HorizontalAlignment="Center" Padding="4 12"></TextBlock>
+            <TextBlock x:Name="titleTb" TextWrapping="Wrap" FontSize="36" HorizontalAlignment="Center" Padding="4 12"></TextBlock>
         </Grid>
 
         <!--ContentPanel - 在此处放置其他内容-->

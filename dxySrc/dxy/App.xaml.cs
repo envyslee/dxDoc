@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using dxy.Resources;
+using System.Collections.ObjectModel;
+using dxy.Entity;
 
 namespace dxy
 {
@@ -219,5 +221,13 @@ namespace dxy
                 throw;
             }
         }
+
+
+        public ObservableCollection<qaSec> BindQa { get; set; }
+        public ObservableCollection<diseaseSec> BindDisease{ get; set; }
+        public ObservableCollection<medicineSec> BindMedicine{ get; set; }
+        public ObservableCollection<articleSec> BindArticle { get; set; }
+
+        public ObservableCollection<searchEnd> BindSearchEnd { get; set; }
     }
 }

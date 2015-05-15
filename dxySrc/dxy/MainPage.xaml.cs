@@ -27,6 +27,11 @@ namespace dxy
             NavigationService.Navigate(new Uri("/Page/Health.xaml", UriKind.Relative));
         }
 
+        private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page/Disease.xaml", UriKind.Relative));
+        }
+
         // 用于生成本地化 ApplicationBar 的示例代码
         //private void BuildLocalizedApplicationBar()
         //{

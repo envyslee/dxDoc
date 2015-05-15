@@ -47,9 +47,32 @@
                 </phone:LongListSelector>
             </phone:PivotItem>
             <phone:PivotItem Header="健康专题">
+                <phone:LongListSelector ItemsSource="{Binding BindPro}">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Background="White" Margin="0 0 0 6" Tag="{Binding Id}" Tap="Grid_Tap_1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.ColumnSpan="2" Text="{Binding Name}" Foreground="Black" Margin="6 8 0 0"></TextBlock>
+                                <Image Grid.Row="1" Source="{Binding Cover_small}" Margin="6 8 0 6"></Image>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Desc}" Foreground="#B3B3B3" Margin="6 0" TextWrapping="Wrap"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                    <phone:LongListSelector.ListFooter>
+                        <TextBlock x:Name="morePro" Foreground="Black" HorizontalAlignment="Center" FontSize="24" Tap="morePro_Tap">加载更多...</TextBlock>
+                    </phone:LongListSelector.ListFooter>
+                </phone:LongListSelector>
+            </phone:PivotItem>
+            <phone:PivotItem Header="资讯收藏">
                 
             </phone:PivotItem>
-            <phone:PivotItem Header="资讯收藏"></phone:PivotItem>
         </phone:Pivot>
         <Grid Background="Black" Opacity="0.8" Visibility="Collapsed">
             <ProgressBar VerticalAlignment="Center" IsIndeterminate="True"></ProgressBar> 
