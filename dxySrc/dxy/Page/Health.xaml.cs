@@ -116,7 +116,7 @@ namespace dxy.Page
                 return;
             }
             page++;
-
+            loading.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace dxy.Page
                 morePro.Text = end;
             }
             projectPage++;
-
+            loading.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
@@ -172,11 +172,13 @@ namespace dxy.Page
         /// <param name="e"></param>
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            loading.Visibility = Visibility.Visible;
             GetNews(page);
         }
 
         private void morePro_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            loading.Visibility = Visibility.Visible;
             GetProject(projectPage);
         }
 

@@ -1,0 +1,41 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="dxy.Page.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="White">
+      
+        <!--ContentPanel - 在此处放置其他内容-->
+        <StackPanel x:Name="ContentPanel" Margin="12,0,12,0">
+            <TextBlock Text="丁香医生（第三方）" Foreground="Black" Margin="12 120 0 4" FontSize="30"></TextBlock>
+            <Border BorderBrush="Gray" Height="2" BorderThickness="2"></Border>
+            <TextBlock Foreground="Black" FontSize="30" Margin="12 60 0 4">软件版本：1.0.0</TextBlock>
+            <Border BorderBrush="Gray" Height="2" BorderThickness="2"></Border>
+            <TextBlock Foreground="Black" FontSize="30" Margin="12 60 0 4">关于丁香园</TextBlock>
+            <TextBlock Foreground="Gray" FontSize="20" Margin="12 0 8 0" TextWrapping="Wrap">丁香园是中国最大的面向医生、医疗机构、医药从业者及生命科学领域人士的专业性社会化网络，提供医学、医疗、药学、生命科学等领域的交流平台、专业知识、最新科研进展及技术服务。我们的客户分布在全球各地，提供针对专业用户的精准数字化营销等服务。
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar >
+        <shell:ApplicationBar  Opacity="0.8">
+            <shell:ApplicationBarIconButton IconUri="/Image/like.png" Text="五星好评"
+                                          Click="Evaluate_OnClick"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton IconUri="/Image/email.png" Text="用户反馈"
+                                          Click="Email_OnClick"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton IconUri="/Image/favs.png"
+                                            Text="推荐应用"
+                                            Click="Promote_OnClick"></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

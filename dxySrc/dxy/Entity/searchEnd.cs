@@ -14,5 +14,9 @@ namespace dxy.Entity
        public string Color { get; set; }
 
        public string Kind { get; set; }
+       public string ArticleId { get; set; }
+
+       public string DiseaseName { get; set; }
+
     }
 }

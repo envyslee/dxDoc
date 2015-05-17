@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:control="clr-namespace:dxy.Control"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -22,8 +23,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>-->
-
-        <phone:Pivot x:Name="healthPivot" Foreground="Black" SelectionChanged="Pivot_SelectionChanged">
+     
+        <phone:Pivot x:Name="healthPivot" Foreground="Black" SelectionChanged="Pivot_SelectionChanged" Style="{StaticResource SpecialPivotStyle}">
+            <phone:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock FontSize="36" Text="{Binding}" Foreground="Black"></TextBlock>
+                </DataTemplate>
+            </phone:Pivot.HeaderTemplate>
             <phone:PivotItem Header="最新资讯">
                 <phone:LongListSelector ItemsSource="{Binding BindNews}">
                     <phone:LongListSelector.ItemTemplate>
@@ -42,7 +48,7 @@
                         </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>
                     <phone:LongListSelector.ListFooter>
-                        <TextBlock x:Name="addMore" Tap="TextBlock_Tap" Foreground="Black" HorizontalAlignment="Center" FontSize="24">加载更多...</TextBlock>
+                        <TextBlock x:Name="addMore" Tap="TextBlock_Tap" Foreground="Black" HorizontalAlignment="Center" FontSize="24">点击加载更多...</TextBlock>
                     </phone:LongListSelector.ListFooter>
                 </phone:LongListSelector>
             </phone:PivotItem>
@@ -66,7 +72,7 @@
                         </DataTemplate>
                     </phone:LongListSelector.ItemTemplate>
                     <phone:LongListSelector.ListFooter>
-                        <TextBlock x:Name="morePro" Foreground="Black" HorizontalAlignment="Center" FontSize="24" Tap="morePro_Tap">加载更多...</TextBlock>
+                        <TextBlock x:Name="morePro" Foreground="Black" HorizontalAlignment="Center" FontSize="24" Tap="morePro_Tap">点击加载更多...</TextBlock>
                     </phone:LongListSelector.ListFooter>
                 </phone:LongListSelector>
             </phone:PivotItem>
@@ -74,11 +80,8 @@
                 
             </phone:PivotItem>
         </phone:Pivot>
-        <Grid Background="Black" Opacity="0.8" Visibility="Collapsed">
-            <ProgressBar VerticalAlignment="Center" IsIndeterminate="True"></ProgressBar> 
-            
-        </Grid>
         
+        <control:Loading x:Name="loading"></control:Loading>
     </Grid>
 
 </phone:PhoneApplicationPage>

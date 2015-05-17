@@ -11,10 +11,13 @@ namespace dxy.Entity
     {
 
         [JsonProperty]
-        public string Current_item_count { get; set; }
+        public bool Success { get; set; }
 
+
+    
 
         [JsonProperty]
-        public List<articleSec> Items { get; set; }
+        public drugSec Data { get; set; }
+
     }
 }

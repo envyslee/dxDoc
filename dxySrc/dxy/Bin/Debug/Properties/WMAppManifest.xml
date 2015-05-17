@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{2e4bb8f7-f3b6-4de2-bb67-74790c82d552}" Title="dxy" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="dxy author" Description="Sample description" Publisher="dxy" PublisherID="{4691daae-7160-4a64-ba72-f5bad0c4afd6}">
+  <App xmlns="" ProductID="{2e4bb8f7-f3b6-4de2-bb67-74790c82d552}" Title="丁香医生" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="dxy author" Description="Sample description" Publisher="dxy" PublisherID="{4691daae-7160-4a64-ba72-f5bad0c4afd6}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

@@ -18,6 +18,9 @@ namespace dxy.Page
 {
     public partial class NewsDetail : PhoneApplicationPage, INotifyPropertyChanged
     {
+        private string doc_id = string.Empty;
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string str)
@@ -61,7 +64,18 @@ namespace dxy.Page
                 //BitmapImage bitmap = new BitmapImage(new Uri(tmpRes.Cover,UriKind.RelativeOrAbsolute));
                 //titleImg.Source = bitmap;
                 titleTb.Text = tmpRes.Title;
+                doctorName.Text = tmpRes.Author;
+                doc_id = tmpRes.Author_id;
                 conWb.NavigateToString(tmpRes.Content);
+            }
+        }
+
+        private void doctorName_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(doc_id))
+            {
+                
+                NavigationService.Navigate(new Uri("/Page/Doctor.xaml?doc_id=" + doc_id, UriKind.Relative));
             }
         }
 

@@ -1,0 +1,59 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="dxy.Page.Exposure"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0" Background="#27AE60"  Margin="0,0,0 24">
+            <TextBlock  FontSize="36" Padding="8 12" Text="虚假药品曝光"/>
+        </Grid>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Foreground="Black" VerticalAlignment="Center">产品名称：</TextBlock>
+            <toolkit:PhoneTextBox Hint="必填" x:Name="productName" Grid.Column="1"></toolkit:PhoneTextBox>
+            <TextBlock Foreground="Black" VerticalAlignment="Center" Grid.Row="1">发布媒体：</TextBlock>
+            <toolkit:PhoneTextBox Hint="必填" x:Name="productMedia" Grid.Column="1" Grid.Row="1"></toolkit:PhoneTextBox>
+            <TextBlock Foreground="Black" VerticalAlignment="Center" Grid.Row="2" >补充说明：</TextBlock>
+            <toolkit:PhoneTextBox Hint="选填" x:Name="productIntro"
+                                         DisplayedMaxLength="200" 
+                                   TextWrapping="Wrap" 
+                                         AcceptsReturn="True" Grid.Column="1" Grid.Row="2"
+                           ></toolkit:PhoneTextBox>
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar BackgroundColor="#27AE60">
+            <shell:ApplicationBarIconButton IconUri="/Image/check.png" Text="提交" Click="ApplicationBarIconButton_Click"></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

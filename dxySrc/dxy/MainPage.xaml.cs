@@ -12,13 +12,14 @@ using System.Net.Http;
 using dxy.Entity;
 using Newtonsoft.Json;
 using System.Windows.Media.Imaging;
+using dxy.Common;
 
 namespace dxy
 {
     public partial class MainPage : PhoneApplicationPage
     {
         HttpClient client = new HttpClient();
-
+        PhoneApplicationService ps = PhoneApplicationService.Current;
 
         // 构造函数
         public MainPage()
@@ -41,13 +42,17 @@ namespace dxy
 
         private void Grid_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Page/Drug.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Page/Vaccine.xaml", UriKind.Relative));
         }
 
        
 
         private async void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+            if (ps.State.ContainsKey("uname"))
+            {
+                bodyTitle.Text = ps.State["uname"].ToString();
+            }
             string url = "http://dxy.com/app/i/columns/article/list?page_index=1&order=publishTime&items_per_page=1";
             var content = await client.GetAsync(url);
             var res =await content.Content.ReadAsStringAsync();
@@ -64,7 +69,44 @@ namespace dxy
         /// <param name="e"></param>
         private void Image_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            if (ps.State.ContainsKey("uid"))
+            {
+                MessageHelper.Show("您已经登录");
+            }
+
             NavigationService.Navigate(new Uri("/Page/Login.xaml", UriKind.Relative));
+        }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page/About.xaml", UriKind.Relative));
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Grid_Tap_2(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page/AlarmList.xaml", UriKind.Relative));
+        }
+
+        private void Grid_Tap_3(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+            //NavigationService.Navigate(new Uri("/Page/Exposure.xaml", UriKind.Relative));
+            //return;
+            if (ps.State.ContainsKey("uid")&&ps.State.ContainsKey("uname"))
+            {
+                NavigationService.Navigate(new Uri("/Page/Exposure.xaml", UriKind.Relative));
+               
+            }
+            else
+            {
+                MessageHelper.Show("请先登录");
+                //NavigationService.Navigate(new Uri("/Page/Login.xaml", UriKind.Relative));
+            }
         }
 
 

@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:control="clr-namespace:dxy.Control"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -33,10 +34,12 @@
                 <DataTemplate>
                     <Grid Background="{Binding Color}" Width="{Binding ElementName=list,Path=ActualWidth}" Margin="0 0 8 0" Tag="{Binding Kind}" Tap="Grid_Tap">
                         <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="26" Padding="12 12 8 8" TextWrapping="Wrap" Tag="{Binding Id}"></TextBlock>
+                        <TextBlock Visibility="Collapsed" Text="{Binding ArticleId}" Tag="{Binding DiseaseName}"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <control:Loading Grid.RowSpan="2" x:Name="loading"></control:Loading>
     </Grid>
 
 </phone:PhoneApplicationPage>

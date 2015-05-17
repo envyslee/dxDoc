@@ -166,113 +166,113 @@
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 糖尿病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 痛风</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 失眠</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">肥胖/减肥</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 颈椎病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 低血压</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 甲亢</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 登革热</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 中暑</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 高血脂</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 风湿</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 扭伤</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 抑郁症</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 内分泌失调</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 怀孕</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 癫痫</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 缺钙</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 低血糖</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 脂肪瘤</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 类风湿</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 贫血</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -288,116 +288,116 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 湿疹</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 荨麻疹</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 痤疮</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 青春痘</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 粉刺</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 烫伤</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 毛囊炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">皮肤过敏</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 疱疹</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 牛皮癣</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 溢脂性皮炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 股癣</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 白癜风</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 扁平疣</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 皮炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 鸡眼</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 银屑病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 神经性皮炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 狐臭</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 水痘</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 皮肤瘙痒</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 烧伤</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -413,43 +413,43 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 头痛</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 头晕</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 青春痘</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 偏头痛</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 脱发</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 白发</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 斑秃</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">脑血栓</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -466,69 +466,69 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 鼻炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
-                            <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 过敏性鼻炎</TextBlock>
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
+                            <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 过敏性鼻炎</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 中耳炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 耳鸣</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 流鼻涕</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 鼻塞</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 鼻窦炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">流鼻血</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 结膜炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 麦粒肿</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 腮腺炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 沙眼</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap">白内障</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -544,38 +544,38 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 口腔溃疡</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 牙疼</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 口臭</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 牙龈出血</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 牙周炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 手足口病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 牙龈炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -590,38 +590,38 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 咽炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 喉咙痛</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 慢性咽炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 咽喉炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 嗓子疼</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 甲状腺</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 咽喉肿痛</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -636,64 +636,64 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 乳腺增生</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 哮喘</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 小儿咳嗽</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 干咳</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肺炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 冠心病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肺结核</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肺癌</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 乳腺癌</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 心脏病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 气管炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 支气管炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -708,38 +708,38 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肩周炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 灰指甲</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 甲沟炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 腱鞘炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 手足口病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 关节炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 滑膜炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -754,18 +754,18 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 腰痛</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 腰椎间盘突出</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 腰肌劳损</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -781,133 +781,133 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 便秘</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 拉肚子</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 腹泻</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胃痛</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胃胀</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胃溃疡</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胃炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6 " Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 慢性胃炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胃肠炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 急性胃肠炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肠炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 结肠炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 消化不良</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 脂肪肝</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 乙肝</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肝炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肝癌</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肾结石</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 呕吐</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胆囊炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胆结石</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 腹痛</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 阑尾炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 黄疸</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 胰腺炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 疝气</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -922,66 +922,66 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 痛经</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 月经不调</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 阴道炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 宫颈糜烂</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 外阴瘙痒</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 盆腔炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 白带异常</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 宫颈炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 子宫肌瘤</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 妇科炎症</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 盆腔积液</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
-                            <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 霉菌性阴道炎</TextBlock>
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
+                            <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"> 霉菌性阴道炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
@@ -996,91 +996,91 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 早泄</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 阳痿</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 龟头炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 前列腺炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 避孕</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 尿路感染</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 尿道炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 尖锐湿疣</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 尿频</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 尿酸</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 肛裂</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 包皮</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 梅毒</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 艾滋病</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 阴囊湿疹</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 淋病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 疝气</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -1095,18 +1095,18 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 痔疮</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 便血</TextBlock>
                         </Grid>
 
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 股癣</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -1122,27 +1122,27 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 痛风</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 静脉曲张</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 骨质增生</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 风湿</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 关节炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
@@ -1157,27 +1157,27 @@
                     </ListBox.ItemsPanel>
 
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" >
+                        <Grid Height="102" Width="102" Background="#27AE60" Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 脚气</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 灰指甲</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 手足口病</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 滑膜炎</TextBlock>
                         </Grid>
                     </ListBoxItem>
                     <ListBoxItem>
-                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6">
+                        <Grid Height="102" Width="102" Background="#27AE60"  Margin="0 0 6 6" Tap="Grid_Tap">
                             <TextBlock Foreground="Black" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"> 足癣</TextBlock>
                         </Grid>
                     </ListBoxItem>

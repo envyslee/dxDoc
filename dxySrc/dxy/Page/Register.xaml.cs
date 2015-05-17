@@ -95,15 +95,30 @@ namespace dxy.Page
             HttpResponseMessage response = await client.SendAsync(request);
             string responseString = await response.Content.ReadAsStringAsync();
             register res = JsonConvert.DeserializeObject<register>(responseString);
-            if (res.Success=="False")
+            if (!res.Success)
             {
                 MessageHelper.Show("注册失败，"+res.Message);
                 return;
             }
-            if (res.Success=="True")
+            if (res.Success)
             {
                 MessageHelper.Show("恭喜注册成功");
                 ps.State["uid"] = res.Appuid;
+            }
+        }
+
+
+  
+
+        private void password_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(password.Password))
+            {
+                passTb.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                passTb.Visibility = Visibility.Visible;
             }
         }
     }

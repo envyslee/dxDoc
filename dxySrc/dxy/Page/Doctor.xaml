@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="dxy.Page.Doctor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:control="clr-namespace:dxy.Control"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False"
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <Grid Grid.Row="0" Background="#EF6C00" Margin="0 0 0 4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock  FontSize="36" Padding="8 12" Text="医生主页"/>
+            <Image x:Name="docImg" Grid.Row="1" HorizontalAlignment="Center"  Height="60" Width="60">
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="30" RadiusY="30" Center="30 30"></EllipseGeometry>
+                </Image.Clip>
+            </Image>
+            <TextBlock x:Name="docName" HorizontalAlignment="Center" Grid.Row="2" FontSize="20"></TextBlock>
+            <TextBlock x:Name="docIntroduction" HorizontalAlignment="Center" Grid.Row="3" FontSize="16" Margin="0 0 0 6"></TextBlock>
+        </Grid>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <phone:LongListSelector ItemsSource="{Binding BindList}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="White" Margin="0 0 0 6" Tap="Grid_Tap" Tag="{Binding Id}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Title}" Foreground="Black" TextWrapping="Wrap" Margin="4 0 0 0" Padding="6 4 4 0"></TextBlock>
+                            <Border Grid.Column="1" BorderThickness="2" BorderBrush="Gray">
+                                <Image  Source="{Binding Cover_small}"></Image>
+                            </Border>
+
+                        </Grid>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </Grid>
+        <control:Loading Grid.RowSpan="2" x:Name="loading"></control:Loading>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

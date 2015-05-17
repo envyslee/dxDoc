@@ -8,13 +8,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    toolkit:TiltEffect.IsTiltEnabled="True"
+    
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="False"
-    Loaded="PhoneApplicationPage_Loaded">
+    Loaded="PhoneApplicationPage_Loaded"
+    toolkit:TiltEffect.IsTiltEnabled="True">
 
     <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
@@ -22,11 +23,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" >
-            <TextBlock Text="" Foreground="Black" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock  Foreground="Black" Style="{StaticResource PhoneTextTitle1Style}" Text="丁香医生" FontSize="60"/>
         </StackPanel>
         <Grid  Grid.Row="1" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="290"></RowDefinition>
                 <RowDefinition Height="12"></RowDefinition>
                 <RowDefinition Height="140"></RowDefinition>
                 <RowDefinition Height="12"></RowDefinition>
@@ -35,7 +36,7 @@
                 <RowDefinition Height="140"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="6"></ColumnDefinition>
+                <ColumnDefinition Width="2"></ColumnDefinition>
                 <ColumnDefinition Width="140"></ColumnDefinition>
                 <ColumnDefinition Width="12"></ColumnDefinition>
                 <ColumnDefinition Width="140"></ColumnDefinition>
@@ -43,17 +44,18 @@
                 <ColumnDefinition Width="140"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1" Grid.ColumnSpan="5" >
-                <Image x:Name="TileImg" Stretch="UniformToFill"></Image>
-                <Grid HorizontalAlignment="Center"
+                <Image x:Name="TileImg" Stretch="UniformToFill" Height="220" Source="/Image/titledxy.jpg" VerticalAlignment="Top"></Image>
+                <Grid HorizontalAlignment="Left"
                       VerticalAlignment="Bottom"
-                      Height="100"
-                      Width="100"
-                      Margin="0 0 0 16">
-                    <Image Source="Image/dxy_p.png" Tap="Image_Tap">
-                        <!--<Image.Clip>
-                            <EllipseGeometry RadiusX="105" RadiusY="100" Center="225,175"/>
-                        </Image.Clip>-->
-                    </Image>
+                      Height="110"
+                      Width="280"
+                      >
+                    <StackPanel Orientation="Horizontal">
+                        <Border Height="80" Margin="12 0 0 0">
+                        <Image  Source="Image/x.png" Tap="Image_Tap" />
+                        </Border>
+                        <TextBlock x:Name="bodyTitle" Foreground="Black" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="6 0 0 0">点击登录</TextBlock>
+                    </StackPanel>
                 </Grid>
 
             </Grid>
@@ -65,36 +67,31 @@
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">常见病症</TextBlock>
             </Grid>
             <Grid Tap="Grid_Tap_1" Grid.Row="2" Grid.Column="5" Background="#27AE60">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">疫苗管理</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">疫苗浏览</TextBlock>
             </Grid>
-            <Grid  Grid.Row="4" Grid.Column="1" Background="#27AE60">
+            <Grid  Grid.Row="4" Grid.Column="1" Background="#27AE60" Tap="Grid_Tap_3">
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">假药曝光</TextBlock>
             </Grid>
             <Grid  Grid.Row="4" Grid.Column="3" Background="#27AE60">
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">我的药箱</TextBlock>
             </Grid>
-            <Grid  Grid.Row="4" Grid.Column="5" Background="#27AE60">
+            <Grid  Grid.Row="4" Grid.Column="5" Background="#27AE60" Tap="Grid_Tap_2">
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">服药提醒</TextBlock>
             </Grid>
         </Grid>
     </Grid>
 
-    <!--<phone:PivotItem Header="搜索">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBox x:Name="searchKey" VerticalAlignment="Top"></TextBox>
-                <Button Grid.Column="1" Foreground="Black" BorderBrush="Black" Tap="Button_Tap">搜索</Button>
-            </Grid>
-                
-        </phone:PivotItem>-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="0.8">
+            <shell:ApplicationBarIconButton IconUri="/Image/settings.png" Text="设置" Click="ApplicationBarIconButton_Click_1"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton IconUri="/Image/about.png" Text="关于" Click="ApplicationBarIconButton_Click"></shell:ApplicationBarIconButton>
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="往期日报" ></shell:ApplicationBarMenuItem>
+                <shell:ApplicationBarMenuItem Text="收藏夹" ></shell:ApplicationBarMenuItem>
+            </shell:ApplicationBar.MenuItems>-->
 
+        </shell:ApplicationBar>
 
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

@@ -34,6 +34,7 @@
                     <DataTemplate>
                         <Grid Tag="{Binding Kind}" Tap="Grid_Tap" Background="White" Margin="0 8 0 4">
                             <TextBlock Text="{Binding Name}" Tag="{Binding Id}"  Foreground="Black" FontSize="28" Padding="8 8 6 8" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Visibility="Collapsed" Text="{Binding ArticleId}" Tag="{Binding DiseaseName}"></TextBlock>
                         </Grid>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>

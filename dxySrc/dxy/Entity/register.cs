@@ -18,7 +18,7 @@ namespace dxy.Entity
        [JsonProperty]
        public string SignKey { get; set; }
        [JsonProperty]
-       public string Success { get; set; }
+       public bool Success { get; set; }
        [JsonProperty]
        public string Username { get; set; }
     }

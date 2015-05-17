@@ -12,24 +12,34 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="False"
-    Loaded="PhoneApplicationPage_Loaded">
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="页面名称" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" Background="#27AE60" >
+            <TextBlock x:Name="drugTitle" FontSize="28" Padding="8 12" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="price" FontSize="24" Padding="0 0 12 0" Foreground="#EF6C00" HorizontalAlignment="Right"/>
         </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
+            <phone:LongListSelector ItemsSource="{Binding BindList}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0 4 0 4">
+                            <TextBlock Text="{Binding CnName}" FontWeight="Bold" FontSize="24" Foreground="Black"></TextBlock>
+                            <TextBlock Text="{Binding Value}" FontSize="20" Foreground="Gray" TextWrapping="Wrap"> </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
         </Grid>
     </Grid>
 

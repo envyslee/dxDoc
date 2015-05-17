@@ -24,6 +24,9 @@ namespace dxy.Page
         private disease dis;
         private medicine med;
 
+        private bool loaded = false;
+
+
 
         private ObservableCollection<searchEnd> se = new ObservableCollection<searchEnd>();
         public ObservableCollection<searchEnd> Se
@@ -47,6 +50,11 @@ namespace dxy.Page
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            if (e.NavigationMode == NavigationMode.Back)
+            {
+                loaded = true;
+                return;
+            }
             if (NavigationContext.QueryString.ContainsKey("key"))
             {
                 key = NavigationContext.QueryString["key"];
@@ -57,7 +65,16 @@ namespace dxy.Page
 
         private async void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            if ((Application.Current as App).BindSearchEnd != null)
+            //if ((Application.Current as App).BindSearchEnd!=null&&(Application.Current as App).BindSearchEnd.Count != 0)
+            //{
+            //    (Application.Current as App).BindSearchEnd.ToList().ForEach(a =>
+            //    {
+            //        se.Add(a);
+            //    });
+            //    loading.Visibility = Visibility.Collapsed;
+            //    return;
+            //}
+            if (loaded)
             {
                 return;
             }
@@ -87,9 +104,19 @@ namespace dxy.Page
                 string responseString = await response.Content.ReadAsStringAsync();
                 dis = JsonConvert.DeserializeObject<disease>(responseString);
                 se.Add(new searchEnd { Name = "相关疾病", Color = "Grey", Kind = "disease" });
-                for (int i = 0; i < 2; i++)
+                if (dis.Data != null)
                 {
-                    se.Add(new searchEnd { Id = dis.Data[i].Id, Name = dis.Data[i].ShowName, Color = "White" });
+                    if (dis.Data.Count < 2)
+                    {
+                        se.Add(new searchEnd { Id = dis.Data[0].Id, Name = dis.Data[0].ShowName, Color = "White", Kind = "disease" });
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            se.Add(new searchEnd { Id = dis.Data[i].Id, Name = dis.Data[i].ShowName, Color = "White", Kind = "disease" });
+                        }
+                    }
                 }
 
                 //相关问答
@@ -97,13 +124,28 @@ namespace dxy.Page
 
                 HttpResponseMessage msg = await c.GetAsync(disease);
                 var content = await msg.Content.ReadAsStringAsync();
-                string tmp = content.Substring(8, content.Length - 9);
-                qa = JsonConvert.DeserializeObject<qa>(tmp);
-                se.Add(new searchEnd { Name = "相关疾病问答", Color = "Grey", Kind = "qa" });
-                for (int i = 0; i < 2; i++)
+                if (!content.Contains("error"))
                 {
-                    se.Add(new searchEnd { Id = qa.Items[i].Id, Name = qa.Items[i].Title, Color = "White" });
+                    string tmp = content.Substring(8, content.Length - 9);
+                    qa = JsonConvert.DeserializeObject<qa>(tmp);
+                    se.Add(new searchEnd { Name = "相关疾病问答", Color = "Grey", Kind = "qa" });
+                    if (qa.Items != null)
+                    {
+                        if (qa.Items.Count < 2)
+                        {
+                            se.Add(new searchEnd { Id = qa.Items[0].Id, Name = qa.Items[0].Title, Color = "White", Kind = "qa", ArticleId = qa.Items[0].Article_id, DiseaseName = qa.Items[0].Disease_name });
+                        }
+                        else
+                        {
+                            for (int i = 0; i < 2; i++)
+                            {
+                                se.Add(new searchEnd { Id = qa.Items[i].Id, Name = qa.Items[i].Title, Color = "White", Kind = "qa", ArticleId = qa.Items[i].Article_id, DiseaseName = qa.Items[i].Disease_name });
+                            }
+                        }
+                    }
                 }
+
+
 
 
                 //相关科普文章
@@ -113,10 +155,22 @@ namespace dxy.Page
                 string articleTmp = articleCon.Substring(8, articleCon.Length - 9);
                 art = JsonConvert.DeserializeObject<article>(articleTmp);
                 se.Add(new searchEnd { Name = "相关科普文章", Color = "Grey", Kind = "article" });
-                for (int i = 0; i < 2; i++)
+                if (art.Items != null)
                 {
-                    se.Add(new searchEnd { Id = art.Items[i].Id, Name = art.Items[i].Article_title, Color = "White" });
+                    if (art.Items.Count < 2)
+                    {
+                        se.Add(new searchEnd { Id = art.Items[0].Id, Name = art.Items[0].Article_title, Color = "White", Kind = "article" });
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            se.Add(new searchEnd { Id = art.Items[i].Id, Name = art.Items[i].Article_title, Color = "White", Kind = "article" });
+                        }
+                    }
                 }
+
+
 
                 //相关药品
                 request = new HttpRequestMessage(HttpMethod.Post, new Uri(diseaseUrl));
@@ -140,39 +194,66 @@ namespace dxy.Page
                 response = await c.SendAsync(request);
                 responseString = await response.Content.ReadAsStringAsync();
                 med = JsonConvert.DeserializeObject<medicine>(responseString);
-                se.Add(new searchEnd { Name = "相关药品", Color = "Grey", Kind = "article" });
-                for (int i = 0; i < 2; i++)
+                se.Add(new searchEnd { Name = "相关药品", Color = "Grey", Kind = "medicine" });
+                if (med.Data != null)
                 {
-                    se.Add(new searchEnd { Id = dis.Data[i].Id, Name = dis.Data[i].ShowName, Color = "White" });
+                    if (med.Data.Count < 2)
+                    {
+                        se.Add(new searchEnd { Id = med.Data[0].Id, Name = med.Data[0].ShowName, Color = "White", Kind = "medicine" });
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            se.Add(new searchEnd { Id = med.Data[i].Id, Name = med.Data[i].ShowName, Color = "White", Kind = "medicine" });
+                        }
+                    }
                 }
 
                 (Application.Current as App).BindQa = new ObservableCollection<qaSec>();
-                qa.Items.ForEach(z =>
+                if (qa!=null&& qa.Items != null)
                 {
-                    (Application.Current as App).BindQa.Add(z);
-                });
+                    qa.Items.ForEach(z =>
+                    {
+                        (Application.Current as App).BindQa.Add(z);
+                    });
+                }
+
 
                 (Application.Current as App).BindArticle = new ObservableCollection<articleSec>();
-                art.Items.ForEach(z =>
+                if (art != null && art.Items != null)
                 {
-                    (Application.Current as App).BindArticle.Add(z);
-                });
-                (Application.Current as App).BindDisease = new ObservableCollection<diseaseSec>();
-                dis.Data.ForEach(z =>
-                {
-                    (Application.Current as App).BindDisease.Add(z);
-                });
-                (Application.Current as App).BindMedicine = new ObservableCollection<medicineSec>();
-                med.Data.ForEach(z =>
-                {
-                    (Application.Current as App).BindMedicine.Add(z);
-                });
+                    art.Items.ForEach(z =>
+                    {
+                        (Application.Current as App).BindArticle.Add(z);
+                    });
+                }
 
-                (Application.Current as App).BindSearchEnd = new ObservableCollection<searchEnd>();
-                se.ToList().ForEach(z =>
+                (Application.Current as App).BindDisease = new ObservableCollection<diseaseSec>();
+                if (dis!= null &&dis.Data != null)
                 {
-                    (Application.Current as App).BindSearchEnd.Add(z);
-                });
+                    dis.Data.ForEach(z =>
+                    {
+                        (Application.Current as App).BindDisease.Add(z);
+                    });
+                }
+
+                (Application.Current as App).BindMedicine = new ObservableCollection<medicineSec>();
+                if (med!= null &&med.Data != null)
+                {
+                    med.Data.ForEach(z =>
+                    {
+                        (Application.Current as App).BindMedicine.Add(z);
+                    });
+                }
+
+
+                //(Application.Current as App).BindSearchEnd = new ObservableCollection<searchEnd>();
+                //se.ToList().ForEach(z =>
+                //{
+                //    (Application.Current as App).BindSearchEnd.Add(z);
+                //});
+                loading.Visibility = Visibility.Collapsed;
 
             }
         }
@@ -180,17 +261,20 @@ namespace dxy.Page
         private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Grid g = sender as Grid;
-            if (g.Tag != null)
+            TextBlock tb = g.Children.First() as TextBlock;
+            TextBlock tbco = g.Children[1] as TextBlock;
+            //点击进入分类
+            if (tb.Tag == null)
             {
-                if (g.Tag == "qa")
+                if (g.Tag.ToString() == "qa")
                 {
                     NavigationService.Navigate(new Uri("/Page/SearchKind.xaml?key=" + key + "&kind=qa", UriKind.Relative));
                 }
-                else if (g.Tag == "disease")
+                else if (g.Tag.ToString() == "disease")
                 {
                     NavigationService.Navigate(new Uri("/Page/SearchKind.xaml?key=" + key + "&kind=disease", UriKind.Relative));
                 }
-                else if (g.Tag == "article")
+                else if (g.Tag.ToString() == "article")
                 {
                     NavigationService.Navigate(new Uri("/Page/SearchKind.xaml?key=" + key + "&kind=article", UriKind.Relative));
                 }
@@ -199,10 +283,27 @@ namespace dxy.Page
                     NavigationService.Navigate(new Uri("/Page/SearchKind.xaml?key=" + key + "&kind=medicine", UriKind.Relative));
                 }
             }
+            //点击进入详情
             else
             {
-                TextBlock tb = g.Children.First() as TextBlock;
+                string id = tb.Tag.ToString();
 
+                if (g.Tag.ToString() == "qa")
+                {
+                    NavigationService.Navigate(new Uri("/Page/QuestionExpand.xaml?articleid=" + tbco.Text + "&diseasename=" + tbco.Tag.ToString(), UriKind.Relative));
+                }
+                else if (g.Tag.ToString() == "disease")
+                {
+                    NavigationService.Navigate(new Uri("/Page/KindDetail.xaml?kind=disease&id=" + id, UriKind.Relative));
+                }
+                else if (g.Tag.ToString() == "article")
+                {
+                    NavigationService.Navigate(new Uri("/Page/NewsDetail.xaml?id=" + id, UriKind.Relative));
+                }
+                else
+                {
+                    NavigationService.Navigate(new Uri("/Page/Drug.xaml?id=" + id + "&name=" + tb.Text, UriKind.Relative));
+                }
             }
         }
     }

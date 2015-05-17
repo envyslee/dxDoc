@@ -51,10 +51,10 @@ namespace dxy.Page
             switch (kind)
             {
                 case "qa":
-                    var tmp=(Application.Current as App).BindQa;
+                    var tmp = (Application.Current as App).BindQa;
                     tmp.ToList().ForEach(z =>
                     {
-                        se.Add(new searchEnd { Name=z.Title,Id=z.Id,Kind="qa"});
+                        se.Add(new searchEnd { Name = z.Title, Id = z.Id, Kind = "qa", ArticleId = z.Article_id, DiseaseName = z.Disease_name });
                     });
                     break;
                 case "disease":
@@ -65,17 +65,17 @@ namespace dxy.Page
                     });
                     break;
                 case "medicine":
-                    var mtmp = (Application.Current as App).BindDisease;
+                    var mtmp = (Application.Current as App).BindMedicine;
                     mtmp.ToList().ForEach(z =>
                     {
                         se.Add(new searchEnd { Name = z.ShowName, Id = z.Id, Kind = "medicine" });
                     });
                     break;
                 case "article":
-                    var atmp = (Application.Current as App).BindDisease;
+                    var atmp = (Application.Current as App).BindArticle;
                     atmp.ToList().ForEach(z =>
                     {
-                        se.Add(new searchEnd { Name = z.ShowName, Id = z.Id, Kind = "article" });
+                        se.Add(new searchEnd { Name = z.Article_title, Id = z.Id, Kind = "article" });
                     });
                     break;
                 default:
@@ -92,13 +92,20 @@ namespace dxy.Page
             switch (kind)
             {
                 case "qa":
-
+                    TextBlock tbco = g.Children[1] as TextBlock;
+                    NavigationService.Navigate(new Uri("/Page/QuestionExpand.xaml?articleid=" + tbco.Text + "&diseasename=" + tbco.Tag.ToString(), UriKind.Relative));
                     break;
 
                 case "disease":
-                    NavigationService.Navigate(new Uri("/Page/KindDetail.xaml?kind=disease&id="+id, UriKind.Relative));
+                    NavigationService.Navigate(new Uri("/Page/KindDetail.xaml?kind=disease&id=" + id, UriKind.Relative));
+                   
                     break;
-
+                case "medicine":
+                    NavigationService.Navigate(new Uri("/Page/Drug.xaml?id=" + id + "&name=" + tb.Text, UriKind.Relative));
+                    break;
+                case "article":
+                    NavigationService.Navigate(new Uri("/Page/NewsDetail.xaml?id=" + id, UriKind.Relative));
+                    break;
                 default:
                     break;
             }

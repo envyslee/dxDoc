@@ -228,6 +228,6 @@ namespace dxy
         public ObservableCollection<medicineSec> BindMedicine{ get; set; }
         public ObservableCollection<articleSec> BindArticle { get; set; }
 
-        public ObservableCollection<searchEnd> BindSearchEnd { get; set; }
+        //public ObservableCollection<searchEnd> BindSearchEnd { get; set; }
     }
 }

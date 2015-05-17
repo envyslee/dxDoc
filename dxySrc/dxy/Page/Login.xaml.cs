@@ -68,31 +68,22 @@ namespace dxy.Page
             HttpResponseMessage response = await client.SendAsync(request);
             string responseString = await response.Content.ReadAsStringAsync();
             register res = JsonConvert.DeserializeObject<register>(responseString);
-            if (res.Success == "False")
+            if (!res.Success)
             {
                 MessageHelper.Show("登录失败，" + res.Message);
                 return;
             }
-            if (res.Success == "True")
+            if (res.Success)
             {
                 MessageHelper.Show("登录成功");
                 ps.State["uid"] = res.Appuid;
+                ps.State["uname"] = res.Username;
                 NavigationService.GoBack();
             }
         }
 
 
 
-        private void account_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrEmpty(account.Text))
-            {
-                 waterAcc.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                waterAcc.Visibility = Visibility.Visible;
-            }
-        }
+    
     }
 }

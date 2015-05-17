@@ -93,7 +93,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\Group.cs" />
     <Compile Include="Common\MessageHelper.cs" />
+    <Compile Include="Common\TimeChange.cs" />
+    <Compile Include="Control\Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\ConFeeType.cs" />
+    <Compile Include="Converter\ConKey.cs" />
+    <Compile Include="Converter\ConRecommentType.cs" />
     <Compile Include="Entity\article.cs" />
     <Compile Include="Entity\articleSec.cs" />
     <Compile Include="Entity\composite.cs" />
@@ -104,6 +112,9 @@
     <Compile Include="Entity\drug.cs" />
     <Compile Include="Entity\drugList.cs" />
     <Compile Include="Entity\drugListSec.cs" />
+    <Compile Include="Entity\drugSec.cs" />
+    <Compile Include="Entity\drugThird.cs" />
+    <Compile Include="Entity\exposureRes.cs" />
     <Compile Include="Entity\medicine.cs" />
     <Compile Include="Entity\medicineSec.cs" />
     <Compile Include="Entity\newDetailSec.cs" />
@@ -114,20 +125,42 @@
     <Compile Include="Entity\projectSec.cs" />
     <Compile Include="Entity\qa.cs" />
     <Compile Include="Entity\qaSec.cs" />
+    <Compile Include="Entity\question.cs" />
+    <Compile Include="Entity\questionSec.cs" />
+    <Compile Include="Entity\questionThird.cs" />
     <Compile Include="Entity\register.cs" />
     <Compile Include="Entity\searchEnd.cs" />
+    <Compile Include="Entity\vaccine.cs" />
+    <Compile Include="Entity\vaccineDetail.cs" />
+    <Compile Include="Entity\vaccineDetailSec.cs" />
+    <Compile Include="Entity\vaccineSec.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AlarmList.xaml.cs">
+      <DependentUpon>AlarmList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AlarmSet.xaml.cs">
+      <DependentUpon>AlarmSet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\Disease.xaml.cs">
       <DependentUpon>Disease.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Doctor.xaml.cs">
+      <DependentUpon>Doctor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Drug.xaml.cs">
       <DependentUpon>Drug.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\DrugList.xaml.cs">
       <DependentUpon>DrugList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Exposure.xaml.cs">
+      <DependentUpon>Exposure.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\Health.xaml.cs">
       <DependentUpon>Health.xaml</DependentUpon>
@@ -147,6 +180,9 @@
     <Compile Include="Page\ProList.xaml.cs">
       <DependentUpon>ProList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\QuestionExpand.xaml.cs">
+      <DependentUpon>QuestionExpand.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
@@ -155,6 +191,12 @@
     </Compile>
     <Compile Include="Page\SearchKind.xaml.cs">
       <DependentUpon>SearchKind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Vaccine.xaml.cs">
+      <DependentUpon>Vaccine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\VaccineDetail.xaml.cs">
+      <DependentUpon>VaccineDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
@@ -168,11 +210,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Control\Loading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\AlarmList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\AlarmSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\Disease.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\Doctor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page\DrugList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\Exposure.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -208,6 +274,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page\QuestionExpand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page\Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +287,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page\SearchKind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\Vaccine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page\VaccineDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -248,10 +326,21 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\dxy.jpg" />
+    <Content Include="Image\about.png" />
+    <Content Include="Image\add.png" />
+    <Content Include="Image\check.png" />
+    <Content Include="Image\clock.jpg" />
+    <Content Include="Image\close.png" />
+    <Content Include="Image\delete.png" />
     <Content Include="Image\dxy_p.png" />
+    <Content Include="Image\email.png" />
     <Content Include="Image\favs.png" />
+    <Content Include="Image\like.png" />
+    <Content Include="Image\minus.png" />
+    <Content Include="Image\settings.png" />
     <Content Include="Image\share.png" />
+    <Content Include="Image\titledxy.jpg" />
+    <Content Include="Image\x.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />

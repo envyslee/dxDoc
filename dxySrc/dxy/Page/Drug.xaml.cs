@@ -8,13 +8,31 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Net.Http;
+using dxy.Entity;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+using dxy.Common;
 
 namespace dxy.Page
 {
     public partial class Drug : PhoneApplicationPage
     {
         private string id;
+        private string name;
         private string url = "http://drugs.dxy.cn/api/v2/detail";
+        private drug d;
+
+        private ObservableCollection<drugThird> bindList = new ObservableCollection<drugThird>();
+        public ObservableCollection<drugThird> BindList
+        {
+            get { return bindList; }
+            set {
+                if (bindList!=value)
+                {
+                    bindList = value;
+                }
+            }
+        }
         public Drug()
         {
             InitializeComponent();
@@ -25,6 +43,10 @@ namespace dxy.Page
             if (NavigationContext.QueryString.ContainsKey("id"))
             {
                 id = NavigationContext.QueryString["id"];
+            }
+            if (NavigationContext.QueryString.ContainsKey("name"))
+            {
+                name = NavigationContext.QueryString["name"];
             }
             base.OnNavigatedTo(e);
         }
@@ -52,8 +74,28 @@ namespace dxy.Page
             request.Content = postData;
             HttpResponseMessage response = await c.SendAsync(request);
             string responseString = await response.Content.ReadAsStringAsync();
-
-
+            d = JsonConvert.DeserializeObject<drug>(responseString);
+            if (d.Success)
+            {
+                d.Data.Detail.ForEach(a =>
+                {
+                    bindList.Add(a);
+                });
+                drugTitle.Text = name;
+                if (d.Data.Price != "0")
+                {
+                    price.Text = d.Data.Price + "元";
+                }
+                else
+                {
+                    price.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                MessageHelper.Show("获取数据失败");
+            }
+            
         }
 
 

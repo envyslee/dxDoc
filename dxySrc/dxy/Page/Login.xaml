@@ -40,8 +40,8 @@ toolkit:TiltEffect.IsTiltEnabled="True"
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <TextBlock Foreground="Black" FontSize="26" VerticalAlignment="Center">账号</TextBlock>
-            <TextBox x:Name="account" Grid.Column="1" TextChanged="account_TextChanged"></TextBox>
-            <TextBlock x:Name="waterAcc" Grid.Column="1"  Grid.Row="0" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center">邮箱或手机号码</TextBlock>
+            <toolkit:PhoneTextBox  Hint="邮箱或手机号码" x:Name="account" Grid.Column="1" ></toolkit:PhoneTextBox>
+            <!--<TextBlock x:Name="waterAcc" Grid.Column="1"  Grid.Row="0" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>-->
             <TextBlock Foreground="Black" FontSize="26" Grid.Row="1" VerticalAlignment="Center">密码</TextBlock>
             <PasswordBox x:Name="pass" Grid.Column="1" Grid.Row="1"></PasswordBox>
             <Button Grid.Row="2" Foreground="#27AE60" Grid.ColumnSpan="2" BorderBrush="#27AE60" Margin="0 36 0 0" Click="Button_Click">登录</Button>

@@ -23,10 +23,11 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
-        <Grid Grid.Row="0" Background="#EF6C00">
+        <StackPanel Grid.Row="0" Background="#EF6C00">
             <!--<Image x:Name="titleImg"  Source="{Binding ImgSource}"></Image>-->
             <TextBlock x:Name="titleTb" TextWrapping="Wrap" FontSize="28" HorizontalAlignment="Center" Padding="4 12"></TextBlock>
-        </Grid>
+            <TextBlock x:Name="doctorName" FontSize="24" HorizontalAlignment="Right" Padding="0 0 12 8" Tap="doctorName_Tap"></TextBlock>
+        </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1">
