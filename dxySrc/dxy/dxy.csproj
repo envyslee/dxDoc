@@ -346,13 +346,14 @@
     <Content Include="Image\add.png" />
     <Content Include="Image\cancel.png" />
     <Content Include="Image\check.png" />
-    <Content Include="Image\clock.jpg" />
+    <Content Include="Image\clock.png" />
     <Content Include="Image\close.png" />
     <Content Include="Image\delete.png" />
     <Content Include="Image\dxy_p.png" />
     <Content Include="Image\email.png" />
     <Content Include="Image\favs.png" />
     <Content Include="Image\like.png" />
+    <Content Include="Image\list.png" />
     <Content Include="Image\minus.png" />
     <Content Include="Image\Search.png" />
     <Content Include="Image\settings.png" />
@@ -372,11 +373,11 @@
     <Content Include="UmImages\sns\qzone.png" />
     <Content Include="UmImages\sns\renren.png" />
     <Content Include="UmImages\sns\sina.png" />
+    <Content Include="UmImages\sns\sms.png" />
     <Content Include="UmImages\sns\tencent.png" />
     <Content Include="UmImages\sns\twitter.png" />
     <Content Include="UmImages\sns\wechat.png" />
     <Content Include="UmImages\sns\wxcircle.png" />
-    <Content Include="UmImages\sns\sms.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">

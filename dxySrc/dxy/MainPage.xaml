@@ -71,7 +71,7 @@
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">疫苗浏览</TextBlock>
             </Grid>
             <Grid  Grid.Row="4" Grid.Column="1" Background="#27AE60" Tap="Grid_Tap_3">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">相关搜索</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">周边药店</TextBlock>
             </Grid>
             <Grid  Grid.Row="4" Grid.Column="3" Background="#27AE60" Tap="Grid_Tap_4">
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">我的药箱</TextBlock>

@@ -22,6 +22,7 @@ namespace dxy.Page
         private HttpClient c = new HttpClient();
         private string id;
         private string kind;
+        private bool loaded = false;
 
         private composite com;
         //private compositeSec comSec;
@@ -45,6 +46,11 @@ namespace dxy.Page
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            if (e.NavigationMode==NavigationMode.Back)
+            {
+                loaded = true;
+                return;
+            }
             if (NavigationContext.QueryString.ContainsKey("id") && NavigationContext.QueryString.ContainsKey("kind"))
             {
                 id = NavigationContext.QueryString["id"];
@@ -55,6 +61,10 @@ namespace dxy.Page
 
         private async void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+            if (loaded)
+            {
+                return;
+            }
             string url = "http://drugs.dxy.cn/api/v2/detail";
             switch (kind)
             {

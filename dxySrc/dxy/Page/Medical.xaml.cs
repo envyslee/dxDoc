@@ -20,8 +20,6 @@ namespace dxy.Page
     {
         private IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
 
-        private string url = "http://drugs.dxy.cn/api/v2/detail";
-        private HttpClient c = new HttpClient();
         private string id;
 
 
@@ -70,36 +68,7 @@ namespace dxy.Page
             }
         }
 
-        /// <summary>
-        /// 点击搜索
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private async void PhoneTextBox_ActionIconTapped(object sender, EventArgs e)
-        {
-            //string key = searchKey.Text;
-            //HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, new Uri(url));
-            //FormUrlEncodedContent postData = new FormUrlEncodedContent(
-            //    new List<KeyValuePair<string, string>>
-            //        {
-            //           new KeyValuePair<string, string>("category", "1"),
-            //            new KeyValuePair<string, string>("u", ""),
-            //            new KeyValuePair<string, string>("keywords", key),
-            //            new KeyValuePair<string, string>("mc", "0000000005e6b1d8ffffffff9c1fe4e0"),
-            //            new KeyValuePair<string, string>("hardName", DeviceFlag.GetDeviceFlag()),
-            //            new KeyValuePair<string, string>("ac", "d5424fa6-adff-4b0a-8917-4264daf4a348"),
-            //            new KeyValuePair<string, string>("bv", "2014"),
-            //            new KeyValuePair<string, string>("vc", "3.5"),
-            //            new KeyValuePair<string, string>("vs", "4.4.4"),
-            //            new KeyValuePair<string, string>("vsNames", ""),
-            //            new KeyValuePair<string, string>("type", "1")
-            //        }
-            //);
-            //request.Content = postData;
-            //HttpResponseMessage response = await c.SendAsync(request);
-            //string responseString = await response.Content.ReadAsStringAsync();
-            //dis = JsonConvert.DeserializeObject<disease>(responseString);
-        }
+     
 
         private void Grid_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
@@ -131,7 +100,7 @@ namespace dxy.Page
         private void CreateEmailApplicationBarItems()
         {
             select = new ApplicationBarIconButton();
-            select.IconUri = new Uri("/Image/check.png", UriKind.RelativeOrAbsolute);
+            select.IconUri = new Uri("/Image/list.png", UriKind.RelativeOrAbsolute);
             select.Text = "选择";
             select.Click += OnSelectClick;
 
@@ -150,17 +119,28 @@ namespace dxy.Page
 
         void OnDeleteClick(object sender, EventArgs e)
         {
-            MessageHelper.Show("del");
             IList source = EmailList.ItemsSource as IList;
             while (EmailList.SelectedItems.Count > 0)
             {
                 searchEnd se = (searchEnd)EmailList.SelectedItems[0];
+                string seid = se.Id;
                 string[] str = settings["drugbox"].ToString().Split(';');
-                var newStr = str.Where(x => x == id).ToArray();
-                string endStr=newStr.s
-                settings["drugbox"].ToString().Remove(id);
-                settings.Remove(id);
-               
+                var newStr = str.Where(x => x != seid).ToArray();
+                string endStr = string.Empty ;
+                if (newStr.Count()!=0)
+                {
+                    newStr.ToList().ForEach(z =>
+                    {
+                        endStr += z + ";";
+                    });
+                    settings["drugbox"] = endStr.Remove(endStr.Length - 1, 1);
+                }
+                else
+                {
+                    settings.Remove("drugbox");
+                }
+                settings.Remove(seid);
+                settings.Save();
                 source.Remove((searchEnd)EmailList.SelectedItems[0]);
             }
         }

@@ -13,11 +13,11 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="False"
-    Loaded="PhoneApplicationPage_Loaded"
-    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#E9ECF1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -28,30 +28,42 @@
         </Grid>
 
         <!--ContentPanel - 在此处放置其他内容-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" >
            
-            <!--<toolkit:PhoneTextBox Hint="查找相关药品"
-                                  x:Name="searchKey"
-                                  ActionIcon="/Image/Search.png"
-                                  ActionIconTapped="PhoneTextBox_ActionIconTapped"></toolkit:PhoneTextBox>-->
+         
             <toolkit:LongListMultiSelector x:Name="EmailList"
+                                            Margin="0 12 0 0"
                                            ItemsSource="{Binding BindList}"
                                            LayoutMode="List"
                                            IsSelectionEnabledChanged="EmailList_IsSelectionEnabledChanged"
                                            SelectionChanged="LongListMultiSelector_SelectionChanged">
                 <toolkit:LongListMultiSelector.ItemTemplate>
                     <DataTemplate>
-                        <Grid  Margin="0 4" Tag="{Binding Id}" Tap="Grid_Tap">
-                        <TextBlock FontSize="24"  Padding="6 8" Text="{Binding Name}"></TextBlock>
+                        <Grid  Margin="0 -10" Tag="{Binding Id}" Tap="Grid_Tap" >
+                        <TextBlock FontSize="24" Foreground="Black" Padding="6 8" Text="{Binding Name}" ></TextBlock>
                         </Grid>
                     </DataTemplate>
                 </toolkit:LongListMultiSelector.ItemTemplate>
+                
+                <!--<toolkit:LongListMultiSelector.ItemContainerStyle>
+                    <Style TargetType="toolkit:LongListMultiSelectorItem">-->
+                        <!--<Setter Property="HintPanelStyle">
+                            <Setter.Value>
+                                <Style TargetType="FrameworkElement">
+                                    <Setter Property="Height" Value="100"/>
+                                    <Setter Property="VerticalAlignment" Value="Top"/>
+                                </Style>
+                            </Setter.Value>
+                        </Setter>-->
+                        <!--<Setter Property="CheckBoxMargin"  Value="0,13,0,0"/>-->
+                    <!--</Style>
+                </toolkit:LongListMultiSelector.ItemContainerStyle>-->
             </toolkit:LongListMultiSelector>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar BackgroundColor="#27AE60">
-            <shell:ApplicationBarIconButton IconUri="/Image/check.png" Text="选择" x:Name="delBar" ></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton IconUri="/Image/list.png" Text="选择" x:Name="delBar" ></shell:ApplicationBarIconButton>
         </shell:ApplicationBar>
 
     </phone:PhoneApplicationPage.ApplicationBar>
