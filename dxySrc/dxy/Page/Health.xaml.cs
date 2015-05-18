@@ -11,6 +11,9 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using dxy.Entity;
 using System.Collections.ObjectModel;
+using System.IO.IsolatedStorage;
+using dxy.Common;
+using System.Text;
 
 namespace dxy.Page
 {
@@ -22,10 +25,28 @@ namespace dxy.Page
         private string end = "已经到底了...";
 
         private bool proLoad = false;
+        private bool newsLoad = false;
+        private bool favorLoad = false;
         private HttpClient client = new HttpClient();
         PhoneApplicationService ps = PhoneApplicationService.Current;
 
+        private IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
 
+        private ObservableCollection<string> titleCollection = new ObservableCollection<string>();
+
+        public ObservableCollection<string> TitleCollection
+        {
+            get
+            {
+                return titleCollection;
+            }
+            set
+            {
+
+                titleCollection = value;
+
+            }
+        }
 
         private news resNews = new news();
 
@@ -88,8 +109,23 @@ namespace dxy.Page
             }
             else if (healthPivot.SelectedIndex == 2)
             {
-
+                if (!favorLoad)
+                {
+                    GetData();
+                    favorLoad = true;
+                }
+               
             }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.NavigationMode == NavigationMode.Back)
+            {
+                favorLoad = false;
+                newsLoad = true;
+            }
+            base.OnNavigatedTo(e);
         }
 
         /// <summary>
@@ -143,6 +179,45 @@ namespace dxy.Page
             loading.Visibility = Visibility.Collapsed;
         }
 
+
+     
+
+        /// <summary>
+        /// 从文件存储中删除数据
+        /// </summary>
+        /// <param name="fileName"></param>
+        private void DeleteFile(string fileName)
+        {
+            using (IsolatedStorageFile isolatedStorageFile = IsolatedStorageFile.GetUserStoreForApplication())
+            {
+                if (isolatedStorageFile.FileExists(fileName))
+                {
+                    isolatedStorageFile.DeleteFile(fileName);
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// 获取收藏资讯
+        /// </summary>
+        private void GetData()
+        {
+            if (settings.Contains("Titles"))
+            {
+                TitleCollection.Clear();
+                string[] titleStr = settings["Titles"].ToString().Split(';');
+
+                foreach (var s in titleStr)
+                {
+                    if (!string.IsNullOrEmpty(s))
+                    {
+                        titleCollection.Add(s);
+                    }
+                }
+            }
+        }
+
         /// <summary>
         /// 页面加载
         /// </summary>
@@ -150,7 +225,11 @@ namespace dxy.Page
         /// <param name="e"></param>
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
-            GetNews(page);
+            if (!newsLoad)
+            {
+                GetNews(page);
+            }
+            
         }
 
         /// <summary>
@@ -202,6 +281,47 @@ namespace dxy.Page
             }
             NavigationService.Navigate(new Uri("/Page/ProList.xaml?id=" + id, UriKind.Relative));
 
+        }
+
+        /// <summary>
+        /// 进入收藏详情页
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void favor_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            Grid g = sender as Grid;
+
+            TextBlock tb = g.Children[0] as TextBlock;
+
+            string title = tb.Text;
+            NavigationService.Navigate(new Uri("/Page/FavorDetail.xaml?file=" + title, UriKind.Relative));
+        }
+
+
+
+        /// <summary>
+        /// 删除收藏
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder newTitleStr = new StringBuilder();
+            var mi = sender as MenuItem;
+            string title = mi.Tag.ToString();
+            DeleteFile(title);
+            string[] titleStr = settings["Titles"].ToString().Split(';');
+            var arrNew = titleStr.Where(x => x != title).ToArray();
+            foreach (var s in arrNew)
+            {
+                newTitleStr.Append(s);
+                newTitleStr.Append(';');
+            }
+            settings["Titles"] = newTitleStr.ToString().TrimEnd(';');
+
+            
+            GetData();
         }
     }
 }

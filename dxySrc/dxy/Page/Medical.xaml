@@ -6,13 +6,15 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="False"
-    Loaded="PhoneApplicationPage_Loaded">
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
     <!--LayoutRoot 是包含所有页面内容的根网格-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -20,17 +22,37 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!--TitlePanel 包含应用程序的名称和页标题-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="我的应用程序" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="页面名称" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
+        
+        <Grid Grid.Row="0" Background="#27AE60" >
+            <TextBlock Text="我的药箱" FontSize="36" Padding="8 12"/>
+        </Grid>
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
            
+            <!--<toolkit:PhoneTextBox Hint="查找相关药品"
+                                  x:Name="searchKey"
+                                  ActionIcon="/Image/Search.png"
+                                  ActionIconTapped="PhoneTextBox_ActionIconTapped"></toolkit:PhoneTextBox>-->
+            <toolkit:LongListMultiSelector x:Name="EmailList"
+                                           ItemsSource="{Binding BindList}"
+                                           LayoutMode="List"
+                                           IsSelectionEnabledChanged="EmailList_IsSelectionEnabledChanged"
+                                           SelectionChanged="LongListMultiSelector_SelectionChanged">
+                <toolkit:LongListMultiSelector.ItemTemplate>
+                    <DataTemplate>
+                        <Grid  Margin="0 4" Tag="{Binding Id}" Tap="Grid_Tap">
+                        <TextBlock FontSize="24"  Padding="6 8" Text="{Binding Name}"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </toolkit:LongListMultiSelector.ItemTemplate>
+            </toolkit:LongListMultiSelector>
         </Grid>
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar BackgroundColor="#27AE60">
+            <shell:ApplicationBarIconButton IconUri="/Image/check.png" Text="选择" x:Name="delBar" ></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
 
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

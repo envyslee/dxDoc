@@ -97,16 +97,20 @@ namespace dxy
 
             //NavigationService.Navigate(new Uri("/Page/Exposure.xaml", UriKind.Relative));
             //return;
-            if (ps.State.ContainsKey("uid")&&ps.State.ContainsKey("uname"))
-            {
-                NavigationService.Navigate(new Uri("/Page/Exposure.xaml", UriKind.Relative));
+            //if (ps.State.ContainsKey("uid")&&ps.State.ContainsKey("uname"))
+            //{
+            //    NavigationService.Navigate(new Uri("/Page/Exposure.xaml", UriKind.Relative));
                
-            }
-            else
-            {
-                MessageHelper.Show("请先登录");
-                //NavigationService.Navigate(new Uri("/Page/Login.xaml", UriKind.Relative));
-            }
+            //}
+            //else
+            //{
+            //    MessageHelper.Show("请先登录");
+            //}
+        }
+
+        private void Grid_Tap_4(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page/Medical.xaml", UriKind.Relative));
         }
 
 

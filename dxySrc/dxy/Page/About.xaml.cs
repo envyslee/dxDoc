@@ -8,11 +8,14 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
+using System.IO.IsolatedStorage;
 
 namespace dxy.Page
 {
     public partial class About : PhoneApplicationPage
     {
+
+         private IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
         public About()
         {
             InitializeComponent();
@@ -20,15 +23,15 @@ namespace dxy.Page
 
         private void Evaluate_OnClick(object sender, EventArgs e)
         {
-            //if (!settings.Contains("hasReviewed"))
-            //{
-            //    settings.Add("hasReviewed", true);
-            //}
-            //else
-            //{
-            //    settings["hasReviewed"] = true;
-            //}
-            //settings.Save();
+            if (!settings.Contains("hasReviewed"))
+            {
+                settings.Add("hasReviewed", true);
+            }
+            else
+            {
+                settings["hasReviewed"] = true;
+            }
+            settings.Save();
             MarketplaceReviewTask reviewTask = new MarketplaceReviewTask();
             reviewTask.Show();
         }

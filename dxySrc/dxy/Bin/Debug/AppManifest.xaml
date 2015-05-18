@@ -3,10 +3,19 @@
     <AssemblyPart x:Name="dxy" Source="dxy.dll" />
     <AssemblyPart x:Name="Coding4Fun.Toolkit.Controls" Source="Coding4Fun.Toolkit.Controls.dll" />
     <AssemblyPart x:Name="Coding4Fun.Toolkit" Source="Coding4Fun.Toolkit.dll" />
+    <AssemblyPart x:Name="Facebook" Source="Facebook.dll" />
+    <AssemblyPart x:Name="Google.ProtocolBuffersLite" Source="Google.ProtocolBuffersLite.dll" />
+    <AssemblyPart x:Name="Hammock.WindowsPhone" Source="Hammock.WindowsPhone.dll" />
+    <AssemblyPart x:Name="ICSharpCode.SharpZipLib.WindowsPhone" Source="ICSharpCode.SharpZipLib.WindowsPhone.dll" />
+    <AssemblyPart x:Name="MicroMsgSDK" Source="MicroMsgSDK.dll" />
+    <AssemblyPart x:Name="Microsoft.Expression.Interactions" Source="Microsoft.Expression.Interactions.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
     <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />
     <AssemblyPart x:Name="System.Net.Http.Extensions" Source="System.Net.Http.Extensions.dll" />
     <AssemblyPart x:Name="System.Net.Http.Primitives" Source="System.Net.Http.Primitives.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="UmengAnalyticsWP8" Source="UmengAnalyticsWP8.dll" />
+    <AssemblyPart x:Name="UmengSocialWP.Silverlight" Source="UmengSocialWP.Silverlight.dll" />
   </Deployment.Parts>
 </Deployment>

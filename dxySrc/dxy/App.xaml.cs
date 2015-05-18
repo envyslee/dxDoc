@@ -14,6 +14,9 @@ namespace dxy
 {
     public partial class App : Application
     {
+        private string umengKey = "55593751e0f55abec00035b5";
+
+
         /// <summary>
         ///提供对电话应用程序的根框架的轻松访问。
         /// </summary>
@@ -25,6 +28,11 @@ namespace dxy
         /// </summary>
         public App()
         {
+            //集成友盟数据分析
+            UmengSDK.UmengAnalytics.Init(umengKey);
+            //调试模式
+            UmengSDK.UmengAnalytics.IsDebug = true;
+
             // 未捕获的异常的全局处理程序。
             UnhandledException += Application_UnhandledException;
 
@@ -124,6 +132,10 @@ namespace dxy
 
             // 在下一次导航中处理清除 BackStack 的重置请求，
             RootFrame.Navigated += CheckForResetNavigation;
+
+
+            //微信分享页面
+            RootFrame.UriMapper = new dxy.Common.AssociationUriMapper();
 
             // 确保我们未再次初始化
             phoneApplicationInitialized = true;

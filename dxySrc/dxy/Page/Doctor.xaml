@@ -55,10 +55,12 @@
                             <Border Grid.Column="1" BorderThickness="2" BorderBrush="Gray">
                                 <Image  Source="{Binding Cover_small}"></Image>
                             </Border>
-
                         </Grid>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
+                <phone:LongListSelector.ListFooter>
+                    <TextBlock x:Name="morePro" Foreground="Black" HorizontalAlignment="Center" FontSize="24" Tap="morePro_Tap">点击加载更多...</TextBlock>
+                </phone:LongListSelector.ListFooter>
             </phone:LongListSelector>
         </Grid>
         <control:Loading Grid.RowSpan="2" x:Name="loading"></control:Loading>

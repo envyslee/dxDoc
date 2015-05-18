@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UmengSocialWP.Winrt</name>
+    </assembly>
+    <members>
+        <member name="M:UmengSocialSDK.Business.ChoosePlatformBroker.ChooseAsync(System.Collections.Generic.List{UmengSocialSDK.UmengClient})">
+            <summary>
+            Mimics the WebAuthenticationBroker's AuthenticateAsync method.
+            
+            </summary>
+        </member>
+        <member name="M:UmengSocialSDK.Business.ImageUtil.GetThumbData(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            获取缩略图
+            </summary>
+            <param name="bitmap">原图像</param>
+            <param name="width">缩略图宽</param>
+            <param name="height">缩略图高</param>
+            <returns>缩略图流</returns>
+        </member>
+        <member name="M:UmengSocialSDK.Business.ShareEditBroker.EditContentAsync(UmengSocialSDK.UmengData)">
+            <summary>
+            Mimics the WebAuthenticationBroker's AuthenticateAsync method.
+            
+            </summary>
+        </member>
+        <member name="M:UmengSocialSDK.Business.WebAuthenticationBroker.AuthenticateAsync(UmengSocialSDK.UmengWebClient,System.Uri)">
+            <summary>
+            Mimics the WebAuthenticationBroker's AuthenticateAsync method.
+            
+            </summary>
+        </member>
+        <member name="M:UmengSocialSDK.UmengClient.LoginAsync">
+            <summary>
+            如果已登录，则从本地加载登录数据；还未登录则需要用户授权
+            </summary>
+            <returns>登录结果</returns>
+        </member>
+        <member name="M:UmengSocialSDK.WhalecloudWebClient.FindErrorPlatform(UmengSocialSDK.Net.Response.SharedEntity)">
+            <summary>
+            查找错误平台
+            </summary>
+            <param name="entity">分享结果</param>
+            <returns>
+                出错的SNS平台
+            </returns>
+        </member>
+        <member name="M:UmengSocialSDK.WhalecloudWebClient.CheckAuthExpired(UmengSocialSDK.Net.Response.SnsEntity)">
+            <summary>
+            授权是否过期
+            </summary>
+            <param name="entity"></param>
+            <returns>
+                true:过期 
+                false:未过期
+            </returns>
+        </member>
+        <member name="M:UmengSocialSDK.MultiClient.#ctor(System.Collections.Generic.List{UmengSocialSDK.UmengClient},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="clients">平台集合</param>
+            <param name="umengKey">忽略该参数</param>
+        </member>
+        <member name="M:UmengSocialSDK.MultiClient.LogoutAsync">
+            <summary>
+            Unsupported
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UmengSocialSDK.MultiClient.CheckLoggedin">
+            <summary>
+            Unsupported
+            </summary>
+        </member>
+        <member name="P:UmengSocialSDK.OAuthResult.UserName">
+            <summary>
+            valid for twitter only
+            </summary>
+        </member>
+        <member name="M:UmengSocialSDK.Net.Common.DateTimeHelper.GetMilliseconds(System.DateTime)">
+            <summary>
+            获取从1970-07-01到当前时间的总毫秒数
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UmengSocialSDK.Net.Common.DateTimeHelper.GetDateTime(System.Double)">
+            <summary>
+            根据从1970-07-01计算的毫秒数获取时间
+            </summary>
+            <param name="milliseconds"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:UmengSocialSDK.Net.Common.JSON”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UmengSocialSDK.Net.Common.JSON.JsonDecode(System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UmengSocialSDK.Net.Common.JSON.JsonDecode(System.String,System.Boolean@)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UmengSocialSDK.Net.Common.JSON.JsonEncode(System.Object)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UmengSocialSDK.Net.Common.JSON.Deserialize(System.String,System.Type)">
+            <summary>
+            反序列化成已知类型的实例
+            </summary>
+            <param name="responseStr"></param>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UmengSocialSDK.Net.GetActionBarRequest.Send">
+            <summary>
+            获取App的EntityKey,Uid等信息[1001]
+            </summary>
+            <param name="imei">用户设备号</param>
+            <param name="imsi">用户SIM卡信息(unknown)</param>
+            <returns></returns>
+        </member>
+        <member name="M:UmengSocialSDK.Net.GetUserInfoRequest.Send">
+            <summary>
+            获取App的EntityKey,Uid等信息[1001]
+            </summary>
+            <param name="imei">用户设备号</param>
+            <param name="imsi">用户SIM卡信息(unknown)</param>
+            <returns></returns>
+        </member>
+        <member name="M:UmengSocialSDK.Net.PostMultiShareRequest.Send(System.Collections.Generic.Dictionary{System.String,System.Object},System.Byte[],System.String)">
+            <summary>
+            分享到多平台
+            </summary>
+            <param name="shareData">被分享的数据</param>
+            <returns>
+                true:发送分享请求成功
+                false:发送分享请求失败
+            </returns>
+        </member>
+        <member name="T:UmengSocialSDK.UmengData">
+            <summary>
+            Loc:可选（针对所有平台，所有分享类型）
+            Title:
+                微信：必选
+                其他平台：分享链接时该参数可选，分享其他类型该参数无效
+            </summary>
+        </member>
+        <member name="T:UmengSocialSDK.UmengText">
+            <summary>
+            Text: 必选
+            Loc:  可选（针对所有平台，所有分享类型）
+            Title:
+                微信：必选
+                其他平台：分享链接时该参数可选，分享其他类型该参数无效
+            </summary>
+        </member>
+        <member name="T:UmengSocialSDK.UmengPicture">
+            <summary>
+            Text: 可选
+            Image:必选
+            Loc:  可选（针对所有平台，所有分享类型）
+            Title:
+                微信：必选
+                其他平台：分享链接时该参数可选，分享其他类型该参数无效
+            </summary>
+        </member>
+        <member name="T:UmengSocialSDK.UmengLink">
+            <summary>
+            Url:  必选
+            Type: 必选（分享纯链接时该参数设为None）
+            Author:可选
+            ThumbnailImage: 只对微信平台有效， 其他平台忽略
+            ThumbnailUrl: 支队Facebook有效，其他平台忽略
+            Text: 可选
+            Image:必选
+            Loc:  可选（针对所有平台，所有分享类型）
+            Title:
+                微信：必选
+                其他平台：分享链接时该参数可选，分享其他类型该参数无效
+            </summary>
+        </member>
+        <member name="P:UmengSocialSDK.UserInfo.Gender">
+            <summary>
+            0：女 1：男
+            </summary>
+        </member>
+        <member name="T:UmengSocialSDK.Business.LocalSettingsHelper">
+            <summary>
+            provide safe method , with internal try-catch block, 
+            Get Method return null if fail
+            </summary>
+        </member>
+    </members>
+</doc>

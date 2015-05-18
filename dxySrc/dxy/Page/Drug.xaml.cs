@@ -12,15 +12,19 @@ using dxy.Entity;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using dxy.Common;
+using System.IO.IsolatedStorage;
 
 namespace dxy.Page
 {
     public partial class Drug : PhoneApplicationPage
     {
+        private IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+
         private string id;
         private string name;
         private string url = "http://drugs.dxy.cn/api/v2/detail";
         private drug d;
+        private bool isFavor;
 
         private ObservableCollection<drugThird> bindList = new ObservableCollection<drugThird>();
         public ObservableCollection<drugThird> BindList
@@ -96,6 +100,63 @@ namespace dxy.Page
                 MessageHelper.Show("获取数据失败");
             }
             
+        }
+
+        /// <summary>
+        /// 添加到药箱
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void addBar_Click(object sender, EventArgs e)
+        {
+            if (!settings.Contains("drugbox"))
+            {
+                settings.Add("drugbox", id);
+                saveName(id,name);
+                MessageHelper.Show("添加成功");
+            }
+            else
+            {
+
+                string[] titleStr = settings["drugbox"].ToString().Split(';');
+                foreach (var s in titleStr)
+                {
+                    if (s == id)
+                    {
+                        isFavor = true;
+                        MessageHelper.Show("该药品已经添加过");
+                        break;
+                    }
+                }
+                if (!isFavor)
+                {
+                    settings["drugbox"] += ";";
+                    settings["drugbox"] += id;
+
+                    saveName(id, name);
+                    MessageHelper.Show("添加成功");
+                }
+            }
+            settings.Save();
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <param name="name">药品名称</param>
+        private void saveName(string id,string name)
+        {
+            if (!settings.Contains(id))
+            {
+                settings.Add(id, name);
+            }
+            else
+            {
+                settings[id] = name;
+            }
+            settings.Save();
         }
 
 

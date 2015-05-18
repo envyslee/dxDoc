@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="zh-CN" />
-  <App xmlns="" ProductID="{2e4bb8f7-f3b6-4de2-bb67-74790c82d552}" Title="丁香医生" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="dxy author" Description="Sample description" Publisher="dxy" PublisherID="{4691daae-7160-4a64-ba72-f5bad0c4afd6}">
+  <App xmlns="" ProductID="{2e4bb8f7-f3b6-4de2-bb67-74790c82d552}" Title="丁香医生" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="leebin" Description="Sample description" Publisher="leebin" PublisherID="{4691daae-7160-4a64-ba72-f5bad0c4afd6}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -9,6 +9,9 @@
       <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
       <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_LOCATION" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
@@ -28,6 +31,14 @@
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
+    <Extensions>
+      <FileTypeAssociation Name="丁香医生" TaskID="_default" NavUriFragment="fileToken=%s">
+        <SupportedFileTypes>
+          <FileType>.wx23c4db6d0d03d3f9</FileType>
+          <FileType>.wechatapp</FileType>
+        </SupportedFileTypes>
+      </FileTypeAssociation>
+    </Extensions>
     <ScreenResolutions>
       <ScreenResolution Name="ID_RESOLUTION_WVGA" />
       <ScreenResolution Name="ID_RESOLUTION_WXGA" />

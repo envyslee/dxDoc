@@ -66,7 +66,7 @@ namespace dxy.Page
                         new KeyValuePair<string, string>("noncestr", "ND7DBOM651JA4ODXLDPI37ASZKCBC32I"),
                         new KeyValuePair<string, string>("mc", "0000000005e6b1d8ffffffff9c1fe4e0"),
                         new KeyValuePair<string, string>("appuid", ""),
-                        new KeyValuePair<string, string>("hardName", "ASUS_X002"),
+                        new KeyValuePair<string, string>("hardName", DeviceFlag.GetDeviceFlag()),
                         new KeyValuePair<string, string>("ac", "d5424fa6-adff-4b0a-8917-4264daf4a348"),
                         new KeyValuePair<string, string>("bv", "2014"),
                         new KeyValuePair<string, string>("vc", "3.5"),

@@ -43,4 +43,10 @@
         </Grid>
     </Grid>
 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar BackgroundColor="#27AE60">
+            <shell:ApplicationBarIconButton IconUri="/Image/add.png" Text="加入药箱" x:Name="addBar" Click="addBar_Click"></shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

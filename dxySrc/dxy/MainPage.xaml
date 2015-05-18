@@ -22,6 +22,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+       
         <StackPanel Grid.Row="0" >
             <TextBlock  Foreground="Black" Style="{StaticResource PhoneTextTitle1Style}" Text="丁香医生" FontSize="60"/>
         </StackPanel>
@@ -61,22 +62,22 @@
             </Grid>
 
             <Grid Tap="Health_Tap" Background="#27AE60" Grid.Row="2" Grid.Column="1">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White">健康科普</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">健康科普</TextBlock>
             </Grid>
             <Grid Tap="Grid_Tap" Grid.Column="3" Background="#27AE60" Grid.Row="2" >
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">常见病症</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">常见病症</TextBlock>
             </Grid>
             <Grid Tap="Grid_Tap_1" Grid.Row="2" Grid.Column="5" Background="#27AE60">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">疫苗浏览</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">疫苗浏览</TextBlock>
             </Grid>
             <Grid  Grid.Row="4" Grid.Column="1" Background="#27AE60" Tap="Grid_Tap_3">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">假药曝光</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">相关搜索</TextBlock>
             </Grid>
-            <Grid  Grid.Row="4" Grid.Column="3" Background="#27AE60">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">我的药箱</TextBlock>
+            <Grid  Grid.Row="4" Grid.Column="3" Background="#27AE60" Tap="Grid_Tap_4">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">我的药箱</TextBlock>
             </Grid>
             <Grid  Grid.Row="4" Grid.Column="5" Background="#27AE60" Tap="Grid_Tap_2">
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">服药提醒</TextBlock>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">服药提醒</TextBlock>
             </Grid>
         </Grid>
     </Grid>

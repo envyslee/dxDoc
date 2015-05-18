@@ -103,7 +103,9 @@ namespace dxy.Page
         {
             Grid g = sender as Grid;
             string id = g.Tag.ToString();
-            NavigationService.Navigate(new Uri("/Page/Drug.xaml?id="+id, UriKind.Relative));
+            StackPanel sp = g.Children[1] as StackPanel;
+            TextBlock tb = sp.Children[0] as TextBlock;
+            NavigationService.Navigate(new Uri("/Page/Drug.xaml?id="+id+"&name="+tb.Text, UriKind.Relative));
         }
 
 

@@ -18,6 +18,9 @@ namespace dxy.Page
     {
         private bool loaded = false;
         private string doc_id;
+        private int pageIndex = 1;
+
+
         private ObservableCollection<newDetailSec> bindList = new ObservableCollection<newDetailSec>();
         public ObservableCollection<newDetailSec> BindList
         {
@@ -52,27 +55,13 @@ namespace dxy.Page
         }
 
 
-        private async void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        private  void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
             if (loaded)
             {
                 return;
             }
-            string doctorUrl = "http://dxy.com/app/i/columns/article/list?page_index=1&items_per_page=10&order=publishTime&author_id=" + doc_id;
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync(doctorUrl);
-            string responseBody = await response.Content.ReadAsStringAsync();
-            string tmp = responseBody.Substring(8, responseBody.Length - 9);
-            newDetail n = JsonConvert.DeserializeObject<newDetail>(tmp);
-            BitmapImage img = new BitmapImage(new Uri(n.Items.FirstOrDefault().Author_avatar, UriKind.Absolute));
-            docImg.Source = img;
-            docName.Text = n.Items.FirstOrDefault().Author;
-            docIntroduction.Text = n.Items.FirstOrDefault().Author_remarks;
-            n.Items.ForEach(a =>
-            {
-                bindList.Add(a);
-            });
-            loading.Visibility = Visibility.Collapsed;
+            GetData();
         }
         /// <summary>
         /// 进入详情
@@ -86,6 +75,45 @@ namespace dxy.Page
             Grid g = sender as Grid;
             string id = g.Tag.ToString();
             NavigationService.Navigate(new Uri("/Page/NewsDetail.xaml?id=" + id, UriKind.Relative));
+        }
+
+        /// <summary>
+        /// 加载更多
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void morePro_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            loading.Visibility = Visibility.Visible;
+            pageIndex++;
+            GetData();
+        }
+
+        private async void GetData()
+        {
+            string doctorUrl = "http://dxy.com/app/i/columns/article/list?page_index=" + pageIndex + "&items_per_page=10&order=publishTime&author_id=" + doc_id;
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(doctorUrl);
+            string responseBody = await response.Content.ReadAsStringAsync();
+            string tmp = responseBody.Substring(8, responseBody.Length - 9);
+            newDetail n = JsonConvert.DeserializeObject<newDetail>(tmp);
+          
+            if (pageIndex==1)
+            {
+                BitmapImage img = new BitmapImage(new Uri(n.Items.FirstOrDefault().Author_avatar, UriKind.Absolute));
+                docImg.Source = img;
+                docName.Text = n.Items.FirstOrDefault().Author;
+                docIntroduction.Text = n.Items.FirstOrDefault().Author_remarks;
+            }
+            if (n.Items.Count<10)
+            {
+                morePro.Visibility = Visibility.Collapsed;
+            }
+            n.Items.ForEach(a =>
+            {
+                bindList.Add(a);
+            });
+            loading.Visibility = Visibility.Collapsed;
         }
     }
 

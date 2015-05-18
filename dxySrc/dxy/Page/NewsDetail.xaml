@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -15,13 +16,43 @@
     Loaded="PhoneApplicationPage_Loaded"
     DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard x:Name="OpenTitleStoryboard">
+            <DoubleAnimation
+                            Storyboard.TargetName="TitleProjection"
+                            Storyboard.TargetProperty="RotationX"
+                            From="-50"
+                            To="0"
+                            Duration="0:0:0.2"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TopPopGrid"
+                                           Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0"
+                                        Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="CloseTitleStoryboard">
+            <DoubleAnimation
+                            Storyboard.TargetName="TitleProjection"
+                            Storyboard.TargetProperty="RotationX"
+                            To="90"
+                            Duration="0:0:0.2"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TopPopGrid"
+                                           Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:.2"
+                                        Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+    
+
     <!--LayoutRoot 是包含所有页面内容的根网格-->
     <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+        
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <StackPanel Grid.Row="0" Background="#EF6C00">
             <!--<Image x:Name="titleImg"  Source="{Binding ImgSource}"></Image>-->
@@ -33,12 +64,78 @@
         <Grid x:Name="ContentPanel" Grid.Row="1">
             <phone:WebBrowser x:Name="conWb"></phone:WebBrowser>
         </Grid>
+
+        <Grid Background="Black"
+              Grid.RowSpan="2"
+              Opacity="0.8"
+              Height="170"
+              x:Name="TopPopGrid"
+              VerticalAlignment="Top"
+              Canvas.ZIndex="10"
+              Visibility="Collapsed">
+            <Grid.Projection>
+                <PlaneProjection x:Name="TitleProjection"/>
+            </Grid.Projection>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       Margin="12 20 12 0"
+                       Text="亲，用的还愉快吗？去商店给个好评吧，您的支持是我前进的动力~"
+                       TextWrapping="Wrap"
+                       FontSize="24"></TextBlock>
+            <Grid  Grid.Row="1"
+                           Grid.Column="0"
+                   Margin="0 -20 0 0">
+                <Ellipse
+                       Height="40"
+                           Width="40"
+                     StrokeThickness="2"
+                     Stroke="White"></Ellipse>
+                <Border 
+                           Height="40"
+                           Width="40"
+                    BorderThickness="0"
+                    Tap="Border_Tap">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Image/check.png"></ImageBrush>
+                    </Border.Background>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="1"
+                           Grid.Column="1"
+                  Margin="0 -20 0 0">
+                <Ellipse 
+                           Height="40"
+                           Width="40"
+                     StrokeThickness="2"
+                     Stroke="White"></Ellipse>
+                <Border 
+                            Height="40"
+                           Width="40"
+                    Tap="Border_Tap_1">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Image/cancel.png"></ImageBrush>
+                    </Border.Background>
+                </Border>
+            </Grid>
+
+        </Grid>
     </Grid>
+
+  
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#EF6C00">
-            <shell:ApplicationBarIconButton IconUri="/Image/share.png" Text="分享" />
-            <shell:ApplicationBarIconButton IconUri="/Image/favs.png" Text="收藏"/>
+            <shell:ApplicationBarIconButton IconUri="/Image/share.png" Text="分享" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Image/favs.png" Text="收藏" Click="ApplicationBarIconButton_Click_1"/>
             <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="菜单项1" Click="menuItem1_Click"/>
                 <shell:ApplicationBarMenuItem Text="菜单项2" Click="menuItem2_Click"/>
